@@ -7,6 +7,6 @@ use Quid\Core;
 class Error extends Core\App\Error
 {
 	// config
-	public static $config = array();
+	public static $config = [];
 }
 ?>

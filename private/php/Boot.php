@@ -7,14 +7,14 @@ use Quid\Core;
 class Boot extends Core\Boot 
 {
 	// config
-	public static $config = array(
-		'version'=>array('app'=>'1.0'),
-		'lang'=>array('en'),
-		'@dev'=>array(
-			'db'=>array('mysql:host=localhost;dbname=project','','')),
-		'@prod'=>array(
-			'db'=>array('mysql:host=localhost;dbname=project','',''))
-	);
+	public static $config = [
+		'version'=>['app'=>'1.0'],
+		'lang'=>['en'],
+		'@dev'=>[
+			'db'=>['mysql:host=localhost;dbname=project','','']],
+		'@prod'=>[
+			'db'=>['mysql:host=localhost;dbname=project','','']]
+	];
 	
 	
 	// onReady

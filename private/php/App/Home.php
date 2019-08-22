@@ -8,7 +8,7 @@ use Quid\Core;
 class Home extends Core\App\Home
 {
 	// config
-	public static $config = array();
+	public static $config = [];
 	
 	
 	// trigger

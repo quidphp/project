@@ -7,6 +7,6 @@ use Quid\Core;
 class Session extends Core\Session
 {
 	// config
-	public static $config = array();
+	public static $config = [];
 }
 ?>
