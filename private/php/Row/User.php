@@ -7,6 +7,6 @@ use Quid\Core;
 class User extends Core\Row\User
 {
 	// config
-	public static $config = array();
+	public static $config = [];
 }
 ?>
