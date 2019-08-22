@@ -16,6 +16,7 @@ class Home extends Core\App\Home
 	{
 		$r = $this->docOpen();
 		$r .= Html::h1('Hello World');
+		$r .= Html::img('[media]/lemur.jpg');
 		$r .= $this->docClose();
 		
 		return $r;
