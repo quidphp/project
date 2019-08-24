@@ -15,15 +15,15 @@ declare(strict_types=1);
 		$config['scheme']['prod/cms'] = true;
 		
 		$config['path']['vendor'] = realpath('../vendor');
-		$config['path']['storage'] = dirname(__DIR__)."/storage";
+		$config['path']['storage'] = dirname(__DIR__).'/storage';
 		$config['path']['private'] = realpath('../private');
 		$config['path']['public'] = __DIR__;
 		
 		if(!empty($config['path']['vendor']))
 		{
-			require_once $config['path']['vendor']."/autoload.php";
+			require_once $config['path']['vendor'].'/autoload.php';
 			
-			require $config['path']['private']."/php/Boot.php";
+			require $config['path']['private'].'/php/Boot.php';
 			Project\Boot::start($config);
 		}
 	}
