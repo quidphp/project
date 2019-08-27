@@ -1,2 +1,2 @@
 # project
-For creating a new project using Quid 5
+For creating a new project using QuidPHP
