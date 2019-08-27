@@ -1,9 +1,9 @@
 {
-	"name": "quid5/project",
+	"name": "quidphp/project",
     "type": "project",
-    "description": "A modern PHP framework and CMS",
-    "keywords": ["quid5","quid","framework","cms"],
-    "homepage": "https://quid5.com",
+    "description": "QuidPHP - A modern framework and CMS",
+    "keywords": ["quidphp","quid","framework","cms"],
+    "homepage": "https://quidphp.com",
     "license": "MIT",
     "authors": [
         {
@@ -13,14 +13,14 @@
     ],
     "require": {
         "php": ">=7.2.0",
-		"quid5/base": "*",
-		"quid5/main": "*",
-		"quid5/orm": "*",
-		"quid5/routing": "*",
-		"quid5/core": "*"
+		"quidphp/base": "*",
+		"quidphp/main": "*",
+		"quidphp/orm": "*",
+		"quidphp/routing": "*",
+		"quidphp/core": "*"
     },
 	"require-dev": {
-	   "quid5/test": "*"
+	   "quidphp/test": "*"
    },
     "autoload": { }
 }
