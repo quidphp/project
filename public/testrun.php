@@ -4,7 +4,7 @@ declare(strict_types=1);
 (function() {
 	if(!empty($_SERVER['REQUEST_URI']) && !empty($_SERVER['HTTP_HOST']))
 	{
-		$config['host']['dev/assert'] = 'assert5.ol';
+		$config['host']['dev/assert'] = 'example.dev';
 		$config['scheme']['dev/assert'] = false;
 
 		$config['path']['storage'] = dirname(__DIR__).'/storage';
@@ -17,6 +17,7 @@ declare(strict_types=1);
 
 		if(!empty($config['path']['vendor']))
 		{
+			$config['db'] = ['mysql:host=localhost;dbname=quidTest','',''];
 			require_once $config['path']['vendor'].'/autoload.php';
 			Quid\Test\Boot::start($config);
 		}
