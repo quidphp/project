@@ -1,12 +1,6 @@
 <?php
 declare(strict_types=1);
 
-/*
- * This file is part of the QuidPHP package.
- * Website: https://quidphp.com
- * License: https://github.com/quidphp/test/blob/master/LICENSE
- */
-
 (function() {
 	if(!empty($_SERVER['REQUEST_URI']) && !empty($_SERVER['HTTP_HOST']))
 	{
@@ -20,7 +14,6 @@ declare(strict_types=1);
 
 		$config['assert']['target'] = true;
 		$config['assert']['overview'] = true;
-
 
 		if(!empty($config['path']['vendor']))
 		{
