@@ -4,7 +4,7 @@ namespace Project;
 use Quid\Core;
 
 // boot
-class Boot extends Core\Boot 
+class Boot extends Core\Boot
 {
 	// config
 	public static $config = [
@@ -15,10 +15,10 @@ class Boot extends Core\Boot
 		'@prod'=>[
 			'db'=>['mysql:host=localhost;dbname=project','','']]
 	];
-	
-	
+
+
 	// onReady
-	protected function onReady():Core\Boot 
+	protected function onReady():Core\Boot
 	{
 		return $this;
 	}
