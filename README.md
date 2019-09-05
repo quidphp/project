@@ -28,14 +28,16 @@ $ composer create-project quidphp/project
 - [quidphp/orm](https://github.com/quidphp/orm) | Quid\Orm - PHP library that provides database access and a comprehensive Object-Relational Mapper
 - [quidphp/routing](https://github.com/quidphp/routing) | Quid\Routing - PHP library that provides a simple route matching and triggering procedure
 - [quidphp/core](https://github.com/quidphp/core) | Quid\Core - PHP, JS and SCSS core components for QuidPHP application and CMS
-- [quidphp/test](https://github.com/quidphp/test) | Quid\Test - Testsuite with around 14000 assertions for QuidPHP
 - [verot/class.upload.php](https://github.com/verot/class.upload.php) | Verot\Upload - A popular PHP class used for resizing images
 - [phpmailer/phpmailer](https://github.com/phpmailer/phpmailer) | PHPMailer\PHPMailer - The classic email sending library for PHP
 - [tedivm/jshrink](https://github.com/tedious/JShrink) | JShrink - Javascript Minifier built in PHP
-- [leafo/scssphp](https://github.com/leafo/scssphp) | Leafo\ScssPhp - SCSS compiler written in PHP
+- [scssphp/scssphp](https://github.com/scssphp/scssphp) | ScssPhp\ScssPhp - SCSS compiler written in PHP
 
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
 
 ## Overview
 **QuidPHP/Project** contains 17 files. Here is an overview:
+- TODO
+
+## Testing
 - TODO

@@ -8,6 +8,7 @@ declare(strict_types=1);
 		$config['scheme']['dev/assert'] = false;
 
 		$config['path']['storage'] = dirname(__DIR__).'/storage';
+		$config['path']['testsuite'] = realpath('../testsuite');
 		$config['path']['private'] = realpath('../private');
 		$config['path']['vendor'] = realpath('../vendor');
 		$config['path']['public'] = __DIR__;
@@ -17,9 +18,10 @@ declare(strict_types=1);
 
 		if(!empty($config['path']['vendor']))
 		{
-			$config['db'] = ['mysql:host=localhost;dbname=quidTest','',''];
 			require_once $config['path']['vendor'].'/autoload.php';
-			Quid\Test\Boot::start($config);
+			
+			require $config['path']['testsuite']."/Boot.php";
+			Quid\TestSuite\Boot::start($config);
 		}
 	}
 })();
