@@ -19,8 +19,8 @@ declare(strict_types=1);
 		if(!empty($config['path']['vendor']))
 		{
 			require_once $config['path']['vendor'].'/autoload.php';
-			
-			require $config['path']['testsuite']."/Boot.php";
+
+			require $config['path']['testsuite'].'/Boot.php';
 			Quid\TestSuite\Boot::start($config);
 		}
 	}
