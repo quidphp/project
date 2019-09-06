@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 namespace Quid\TestSuite {
+use Quid\Test;
 use Quid\Core;
 use Quid\Orm;
 use Quid\Main;
@@ -16,13 +17,6 @@ class Boot extends Core\Boot
 		'types'=>['assert'],
 		'version'=>['assert'=>'1.0.1'],
 		'lang'=>['en','fr'],
-		'typeAs'=>[
-			Core\Lang\En::class=>['assert'=>'cms'],
-			Core\Lang\Fr::class=>['assert'=>'cms'],
-			Core\Col::class=>['assert'=>'cms'],
-			Core\Table::class=>['assert'=>'cms'],
-			Core\Col\Date::class=>['assert'=>'cms'],
-			Core\Col\Email::class=>['assert'=>'cms']],
 		'cache'=>false,
 		'compile'=>false,
 		'speed'=>true,
@@ -32,15 +26,10 @@ class Boot extends Core\Boot
 		'timeLimit'=>30,
 		'assert'=>[
 			'target'=>true,
-			'all'=>[
-				'Quid\Test\Base',
-				'Quid\Test\Main',
-				'Quid\Test\Orm',
-				'Quid\Test\Routing',
-				'Quid\Test\Core'],
 			'method'=>'start',
 			'overview'=>true,
 			'db'=>null,
+			'exclude'=>array(Test\Lemur::class,Test\Site::class),
 			'fileSession'=>Core\File\Session::class,
 			'lang'=>['fr'=>Core\Lang\Fr::class,'en'=>Core\Lang\En::class],
 			'langFile'=>['fr'=>'[assertCommon]/fr.php','en'=>'[assertCommon]/en.php'],
@@ -70,6 +59,11 @@ class Boot extends Core\Boot
 			'assertCurrent'=>'[assert]/current',
 			'assertMedia'=>'[storagePublic]/media/assert'],
 		'config'=>[
+			Core\Table::class=>array(
+				'order'=>['id'=>'desc'],
+				'relation'=>['appendPrimary'=>true]),
+			Core\Col::class=>array(
+				'generalExcerptMin'=>100),
 			Core\Row\User::class=>[
 				'crypt'=>[
 					'passwordHash'=>['options'=>['cost'=>4]]]],
@@ -83,10 +77,6 @@ class Boot extends Core\Boot
 				'can'=>[
 					'login'=>['assert'=>false]]],
 			Core\Role\User::class=>[
-				'ignore'=>false,
-				'can'=>[
-					'login'=>['assert'=>false]]],
-			Core\Role\Editor::class=>[
 				'ignore'=>false,
 				'can'=>[
 					'login'=>['assert'=>true]]],
@@ -130,9 +120,18 @@ class Boot extends Core\Boot
 		$this->beforeAssert();
 
 		$target = $this->attr('assert/target');
+		$exclude = $this->attr('assert/exclude');
 		if($target === true)
-		$target = $this->attr('assert/all');
-
+		{
+			$closure = function(string $value) {
+				return (stripos($value,'quid\\test') === 0)? true:false;
+			};
+			$target = array_keys(Base\Autoload::allPsr4($closure,true));
+			
+			if(!empty($exclude))
+			$target = Base\Arr::valuesStrip($exclude,$target);
+		}
+		
 		if(!empty($target))
 		{
 			$method = $this->attr('assert/method');
@@ -153,7 +152,10 @@ class Boot extends Core\Boot
 		$overview = $this->attr('assert/overview');
 		if($overview === true)
 		{
-			$autoload = Base\Autoload::overview('quid','test',false);
+			$closure = function(string $value) {
+				return (stripos($value,'quid') === 0 && stripos($value,'quid\\test') !== 0)? true:false;
+			};
+			$autoload = Base\Autoload::overview($closure,true);
 			Base\Debug::var($autoload);
 			$lines = Base\Column::value('line',$autoload);
 			Base\Debug::var(Base\Number::addition(...$lines));
@@ -332,7 +334,7 @@ use Quid\Core;
 \Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Error',function() {
 
 // error
-class Error extends Core\App\Error
+class Error extends Core\Route\Error
 {
 	// config
 	public static $config = [];
@@ -355,7 +357,7 @@ use Quid\Core;
 \Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Home',function() {
 
 // home
-class Home extends Core\App\Home
+class Home extends Core\Route\Home
 {
 	// config
 	public static $config = [];
@@ -378,7 +380,7 @@ use Quid\Core;
 \Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Sitemap',function() {
 
 // sitemap
-class Sitemap extends Core\App\Sitemap
+class Sitemap extends Core\Route\Sitemap
 {
 	// config
 	public static $config = [];

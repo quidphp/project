@@ -39,5 +39,5 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 **QuidPHP/Project** contains 17 files. Here is an overview:
 - TODO
 
-## Testing
+## Test suite
 - TODO

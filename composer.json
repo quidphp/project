@@ -1,8 +1,8 @@
 {
 	"name": "quidphp/project",
     "type": "project",
-    "description": "QuidPHP - A modern framework and CMS",
-    "keywords": ["quidphp","quid","framework","cms"],
+    "description": "Create a new project using QuidPHP",
+    "keywords": ["quidphp","quid","framework"],
     "homepage": "https://quidphp.com",
     "license": "MIT",
     "authors": [

@@ -5,7 +5,7 @@ use Quid\Base\Html;
 use Quid\Core;
 
 // home
-class Home extends Core\App\Home
+class Home extends Core\Route\Home
 {
 	// config
 	public static $config = [];

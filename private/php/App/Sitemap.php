@@ -3,8 +3,8 @@ declare(strict_types=1);
 namespace Project\App;
 use Quid\Core;
 
-// error
-class Error extends Core\Route\Error
+// sitemap
+class Sitemap extends Core\Route\Sitemap
 {
 	// config
 	public static $config = [];
