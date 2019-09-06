@@ -6,7 +6,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/quidphp/project)](https://github.com/quidphp/project)
 
 ## About
-TODO
+LOREM IPSUM
 
 ## License
 **QuidPHP/Project** is available as an open-source software under the [MIT license](LICENSE).
