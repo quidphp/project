@@ -10,7 +10,6 @@ return [
 
 	'path'=>[
 		'private'=>__DIR__.'/private',
-		'public'=>__DIR__.'/public',
 		'storage'=>__DIR__.'/storage',
 		'vendor'=>__DIR__.'/vendor'
 	],
