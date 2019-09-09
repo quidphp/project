@@ -8,7 +8,7 @@ declare(strict_types=1);
 	{
 		$config = require dirname(__DIR__).'/env.php';
 		$config['path']['public'] = __DIR__;
-		
+
 		if(!empty($config['path']['vendor']))
 		{
 			require_once $config['path']['vendor'].'/autoload.php';
