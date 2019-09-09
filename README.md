@@ -77,5 +77,6 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 The QuidPHP test suite contains about 14000 assertions which can thoroughly test a setup. In order to run the test suite, follow the Installation steps and then do the following:
 1. Import [storage/sql/test.sql.zip](storage/sql/test.sql.zip) within a new Mysql/MariaDB database.
 2. Copy your database connection parameters in [testsuite/Boot.php](testsuite/Boot.php).
-3. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
-4. Please delete the test suite files once the run has been successful.
+3. Adjust the scheme host environment data within the [public/testsuite.php](public/testsuite.php) entry file.
+4. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
+5. Please delete the test suite files once the run has been successful.

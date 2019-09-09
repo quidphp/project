@@ -6,9 +6,7 @@ declare(strict_types=1);
 (function() {
 	if(!empty($_SERVER['REQUEST_URI']) && !empty($_SERVER['HTTP_HOST']))
 	{
-		$config['host']['dev/assert'] = 'testsuite.dev';
-		$config['scheme']['dev/assert'] = false;
-
+		$config['schemeHost']['dev/assert'] = 'http://testsuite.dev';
 		$config['path']['storage'] = dirname(__DIR__).'/storage';
 		$config['path']['testsuite'] = realpath('../testsuite');
 		$config['path']['private'] = realpath('../private');
