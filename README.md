@@ -6,7 +6,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/quidphp/project)](https://github.com/quidphp/project)
 
 ## About
-LOREM IPSUM
+This repository contains a sample project built on top of the QuidPHP framework. It also offers a script to run the full QuidPHP test suite.
 
 ## License
 **QuidPHP/Project** is available as an open-source software under the [MIT license](LICENSE).
@@ -17,11 +17,25 @@ LOREM IPSUM
 $ composer create-project quidphp/project
 ```
 
+Once this is complete, simply follow these steps:
+1. Make sure the [storage](storage) and [public](public) folders are writable by your web server (including subdirectories).
+2. Configure an Apache Virtual Host in order to have your domain resolves to the document root [public](public).
+3. Import [storage/sql/project.sql.zip](storage/sql/project.sql.zip) within a new Mysql/MariaDB database.
+4. Update the scheme hosts and database parameters within the [env.php](env.php) file.
+5. Not required, but you are encouraged to change the namespace of all PHP classes within the [private/php](private/php) folder. The default namespace is Project.
+6. From your web browser, enter the URL to the [public/index.php](public/index.php) entry file.
+
 ## Requirement
 **QuidPHP/Project** requires the following:
-- Apache with mod_rewrite
+- Apache server with mod_rewrite
 - PHP 7.2+ with fileinfo, curl, openssl, posix, PDO and pdo_mysql
 - Mysql or MariaDB database
+
+The following PHP INI directives are also required:
+- post_max_size must be at least 1MB
+- post_max_size must be larger than upload_max_filesize
+- memory_limit must be at least 128MB
+- browscap needs to contain a valid path 
 
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
@@ -51,16 +65,17 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [private/scss/app/app.scss](private/scss/app/app.scss) | Main scss stylesheet for the app
 - [private/scss/app/include.scss](private/scss/app/include.scss) | Scss stylesheet for declaring variables and mixins
 - [private/scss/app/style.scss](private/scss/app/style.scss) | Scss stylesheet for basic styles
-- [private/sql/project.sql.zip](private/sql/project.sql.zip) | Minimal database structure required
 - [public/.htaccess](public/.htaccess) | Simple apache directive file, requires mod_rewrite
 - [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
 - [public/index.php](public/index.php) | Index file for booting the application
 - [public/testsuite.php](public/testsuite.php) | File for booting the quidPHP testsuite
+- [storage/sql/project.sql.zip](storage/sql/project.sql.zip) | Minimal database structure required
+- [storage/sql/test.sql.zip](storage/sql/test.sql.zip) | Sql database required for the quidPHP testsuite
 - [testsuite/Boot.php](testsuite/Boot.php) | Class for booting the quidPHP testsuite
-- [testsuite/test.sql.zip](testsuite/test.sql.zip) | Sql database required for the quidPHP testsuite
 
 ## Test suite
 The QuidPHP test suite contains about 14000 assertions which can thoroughly test a setup. In order to run the test suite, follow the Installation steps and then do the following:
-1. Import [testsuite/test.sql.zip](testsuite/test.sql.zip) within a new Mysql/MariaDB database.
+1. Import [storage/sql/test.sql.zip](storage/sql/test.sql.zip) within a new Mysql/MariaDB database.
 2. Copy your database connection parameters in [testsuite/Boot.php](testsuite/Boot.php).
-3. From your browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
+3. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
+4. Please delete the test suite files once the run has been successful.
