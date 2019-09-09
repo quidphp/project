@@ -9,7 +9,7 @@ class Boot extends Core\Boot
 {
 	// config
 	public static $config = [
-		'types'=>array('app'),
+		'types'=>['app'],
 		'version'=>['app'=>'1.0'],
 		'lang'=>['en'],
 		'@app'=>[
