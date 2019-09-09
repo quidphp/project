@@ -1,5 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 // declare environment data for the application
+
 return [
 	'schemeHost'=>[
 		'dev/app'=>'http://project.dev',
