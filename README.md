@@ -29,7 +29,7 @@ $ composer create-project quidphp/project
 - [quidphp/main](https://github.com/quidphp/main) | Quid\Main - PHP library that provides a set of base objects and collections 
 - [quidphp/orm](https://github.com/quidphp/orm) | Quid\Orm - PHP library that provides database access and a comprehensive Object-Relational Mapper
 - [quidphp/routing](https://github.com/quidphp/routing) | Quid\Routing - PHP library that provides a simple route matching and triggering procedure
-- [quidphp/core](https://github.com/quidphp/core) | Quid\Core - PHP, JS and SCSS core components for QuidPHP application and CMS
+- [quidphp/core](https://github.com/quidphp/core) | PHP library that provides an extendable platform to create dynamic applications
 - [verot/class.upload.php](https://github.com/verot/class.upload.php) | Verot\Upload - A popular PHP class used for resizing images
 - [phpmailer/phpmailer](https://github.com/phpmailer/phpmailer) | PHPMailer\PHPMailer - The classic email sending library for PHP
 - [tedivm/jshrink](https://github.com/tedious/JShrink) | JShrink - Javascript Minifier built in PHP
