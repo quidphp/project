@@ -1,10 +1,12 @@
 <?php
 declare(strict_types=1);
 
+// testsuite
+// file for booting the quidPHP testsuite
 (function() {
 	if(!empty($_SERVER['REQUEST_URI']) && !empty($_SERVER['HTTP_HOST']))
 	{
-		$config['host']['dev/assert'] = 'example.dev';
+		$config['host']['dev/assert'] = 'testsuite.dev';
 		$config['scheme']['dev/assert'] = false;
 
 		$config['path']['storage'] = dirname(__DIR__).'/storage';

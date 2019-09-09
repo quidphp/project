@@ -4,6 +4,7 @@ namespace Project\App;
 use Quid\Core;
 
 // sitemap
+// class for the automated sitemap.xml route of the app
 class Sitemap extends Core\Route\Sitemap
 {
 	// config

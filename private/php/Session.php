@@ -4,6 +4,7 @@ namespace Project;
 use Quid\Core;
 
 // session
+// class for managing the session
 class Session extends Core\Session
 {
 	// config

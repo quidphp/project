@@ -5,6 +5,7 @@ use Quid\Base\Html;
 use Quid\Core;
 
 // home
+// class for the home route of the app
 class Home extends Core\Route\Home
 {
 	// config

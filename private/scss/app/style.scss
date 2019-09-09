@@ -1,11 +1,13 @@
 // compileOnSave: false
 
-/* INIT */
+// style
+// scss stylesheet for basic styles
+
+// init
 @include reset();
 @include default();
 
-
-/* HTML */
+// html
 body {
 	font-weight: 400;
 	line-height: 1.6;

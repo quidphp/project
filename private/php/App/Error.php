@@ -4,6 +4,7 @@ namespace Project\App;
 use Quid\Core;
 
 // error
+// class for the error route of the app
 class Error extends Core\Route\Error
 {
 	// config

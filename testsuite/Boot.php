@@ -29,7 +29,7 @@ class Boot extends Core\Boot
 			'method'=>'start',
 			'overview'=>true,
 			'db'=>null,
-			'exclude'=>[Test\Lemur::class,Test\Site::class],
+			'exclude'=>array(Test\Lemur::class,Test\Site::class),
 			'fileSession'=>Core\File\Session::class,
 			'lang'=>['fr'=>Core\Lang\Fr::class,'en'=>Core\Lang\En::class],
 			'langFile'=>['fr'=>'[assertCommon]/fr.php','en'=>'[assertCommon]/en.php'],
@@ -59,11 +59,11 @@ class Boot extends Core\Boot
 			'assertCurrent'=>'[assert]/current',
 			'assertMedia'=>'[storagePublic]/media/assert'],
 		'config'=>[
-			Core\Table::class=>[
+			Core\Table::class=>array(
 				'order'=>['id'=>'desc'],
-				'relation'=>['appendPrimary'=>true]],
-			Core\Col::class=>[
-				'generalExcerptMin'=>100],
+				'relation'=>['appendPrimary'=>true]),
+			Core\Col::class=>array(
+				'generalExcerptMin'=>100),
 			Core\Row\User::class=>[
 				'crypt'=>[
 					'passwordHash'=>['options'=>['cost'=>4]]]],
@@ -127,11 +127,11 @@ class Boot extends Core\Boot
 				return (stripos($value,'quid\\test') === 0)? true:false;
 			};
 			$target = array_keys(Base\Autoload::allPsr4($closure,true));
-
+			
 			if(!empty($exclude))
 			$target = Base\Arr::valuesStrip($exclude,$target);
 		}
-
+		
 		if(!empty($target))
 		{
 			$method = $this->attr('assert/method');

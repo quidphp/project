@@ -19,7 +19,9 @@ $ composer create-project quidphp/project
 
 ## Requirement
 **QuidPHP/Project** requires the following:
+- Apache with mod_rewrite
 - PHP 7.2+ with fileinfo, curl, openssl, posix, PDO and pdo_mysql
+- Mysql or MariaDB database
 
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
@@ -36,8 +38,26 @@ $ composer create-project quidphp/project
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
 
 ## Overview
-**QuidPHP/Project** contains 17 files. Here is an overview:
-- TODO
+**QuidPHP/Project** contains 19 files. Here is an overview:
+- [env.php](env.php) | Declare environment data for the application
+- [private/js/app/app.js](private/js/app/app.js) | Main javaScript file for the app
+- [private/php/Boot.php](private/php/Boot.php) | Class for booting the application
+- [private/php/Session.php](private/php/Session.php) | Class for managing the session
+- [private/php/App/Error.php](private/php/App/Error.php) | Class for the error route of the app
+- [private/php/App/Error.php](private/php/App/Error.php) | Class for the home route of the app
+- [private/php/App/Error.php](private/php/App/Error.php) | Class for the robots.txt route of the app
+- [private/php/App/Error.php](private/php/App/Error.php) | Class for the automated sitemap.xml route of the app
+- [private/php/Row/User.php](private/php/Row/User.php) | Class for a row of the user table
+- [private/scss/app/app.scss](private/scss/app/app.scss) | Main scss stylesheet for the app
+- [private/scss/app/include.scss](private/scss/app/include.scss) | Scss stylesheet for declaring variables and mixins
+- [private/scss/app/style.scss](private/scss/app/style.scss) | Scss stylesheet for basic styles
+- [private/sql/project.sql.zip](private/sql/project.sql.zip) | Minimal database structure required
+- [public/.htaccess](public/.htaccess) | Simple apache directive file, requires mod_rewrite
+- [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
+- [public/index.php](public/.htaccess) | Index file for booting the application
+- [public/testsuite.php](public/.htaccess) | File for booting the quidPHP testsuite
+- [testsuite/Boot.php](public/.htaccess) | Class for booting the quidPHP testsuite
+- [testsuite/test.sql.zip](public/.htaccess) | Sql database required for the quidPHP testsuite
 
 ## Test suite
 - TODO
