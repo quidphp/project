@@ -56,8 +56,8 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
 - [public/index.php](public/index.php) | Index file for booting the application
 - [public/testsuite.php](public/testsuite.php) | File for booting the quidPHP testsuite
-- [testsuite/Boot.php](public/.htaccess) | Class for booting the quidPHP testsuite
-- [testsuite/test.sql.zip](public/test.sql.zip) | Sql database required for the quidPHP testsuite
+- [testsuite/Boot.php](testsuite/Boot.php) | Class for booting the quidPHP testsuite
+- [testsuite/test.sql.zip](testsuite/test.sql.zip) | Sql database required for the quidPHP testsuite
 
 ## Test suite
 - TODO
