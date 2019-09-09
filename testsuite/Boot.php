@@ -13,7 +13,7 @@ class Boot extends Core\Boot
 {
 	// config
 	public static $config = [
-		'db'=>['mysql:host=localhost;dbname=project','',''], // copy database parameters here
+		'db'=>['mysql:host=localhost;dbname=testsuite','',''], // copy database parameters here
 		'types'=>['assert'],
 		'version'=>['assert'=>'1.0.1'],
 		'lang'=>['en','fr'],
