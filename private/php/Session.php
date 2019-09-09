@@ -7,7 +7,7 @@ use Quid\Core;
 // class for managing the session
 class Session extends Core\Session
 {
-	// config
-	public static $config = [];
+    // config
+    public static $config = [];
 }
 ?>

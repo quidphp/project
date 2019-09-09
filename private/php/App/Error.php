@@ -7,7 +7,7 @@ use Quid\Core;
 // class for the error route of the app
 class Error extends Core\Route\Error
 {
-	// config
-	public static $config = [];
+    // config
+    public static $config = [];
 }
 ?>

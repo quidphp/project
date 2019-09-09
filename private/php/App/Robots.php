@@ -7,7 +7,7 @@ use Quid\Core;
 // class for the robots.txt route of the app
 class Robots extends Core\Route\Robots
 {
-	// config
-	public static $config = [];
+    // config
+    public static $config = [];
 }
 ?>

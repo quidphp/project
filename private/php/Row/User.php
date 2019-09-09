@@ -7,7 +7,7 @@ use Quid\Core;
 // class for a row of the user table
 class User extends Core\Row\User
 {
-	// config
-	public static $config = [];
+    // config
+    public static $config = [];
 }
 ?>
