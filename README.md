@@ -44,9 +44,9 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [private/php/Boot.php](private/php/Boot.php) | Class for booting the application
 - [private/php/Session.php](private/php/Session.php) | Class for managing the session
 - [private/php/App/Error.php](private/php/App/Error.php) | Class for the error route of the app
-- [private/php/App/Error.php](private/php/App/Error.php) | Class for the home route of the app
-- [private/php/App/Error.php](private/php/App/Error.php) | Class for the robots.txt route of the app
-- [private/php/App/Error.php](private/php/App/Error.php) | Class for the automated sitemap.xml route of the app
+- [private/php/App/Home.php](private/php/App/Home.php) | Class for the home route of the app
+- [private/php/App/Robots.php](private/php/App/Robots.php) | Class for the robots.txt route of the app
+- [private/php/App/Sitemap.php](private/php/App/Sitemap.php) | Class for the automated sitemap.xml route of the app
 - [private/php/Row/User.php](private/php/Row/User.php) | Class for a row of the user table
 - [private/scss/app/app.scss](private/scss/app/app.scss) | Main scss stylesheet for the app
 - [private/scss/app/include.scss](private/scss/app/include.scss) | Scss stylesheet for declaring variables and mixins
