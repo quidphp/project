@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 // testsuite
-// file for booting the quidPHP testsuite
+// file for booting the QuidPHP testsuite
 (function() {
 	if(!empty($_SERVER['REQUEST_URI']) && !empty($_SERVER['HTTP_HOST']))
 	{

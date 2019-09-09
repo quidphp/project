@@ -19,10 +19,10 @@ $ composer create-project quidphp/project
 
 Once this is complete, simply follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server (including subdirectories).
-2. Configure an Apache Virtual Host in order to have your domain resolves to the document root [public](public).
+2. Configure an Apache Virtual Host in order to have a domain pointing to the [public](public) document root.
 3. Import [storage/sql/project.sql.zip](storage/sql/project.sql.zip) within a new Mysql/MariaDB database.
 4. Update the scheme hosts and database parameters within the [env.php](env.php) file.
-5. Not required, but you are encouraged to change the namespace of all PHP classes within the [private/php](private/php) folder. The default namespace is Project.
+5. Not required, but you are encouraged to change the namespace of all PHP classes within the [private/php](private/php) folder. The default namespace is Project. You will also need to change the namespace of the Boot class within the [public/index.php](public/index.php) entry file.
 6. From your web browser, enter the URL to the [public/index.php](public/index.php) entry file.
 
 ## Requirement
@@ -68,10 +68,10 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [public/.htaccess](public/.htaccess) | Simple apache directive file, requires mod_rewrite
 - [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
 - [public/index.php](public/index.php) | Index file for booting the application
-- [public/testsuite.php](public/testsuite.php) | File for booting the quidPHP testsuite
+- [public/testsuite.php](public/testsuite.php) | File for booting the QuidPHP testsuite
 - [storage/sql/project.sql.zip](storage/sql/project.sql.zip) | Minimal database structure required
-- [storage/sql/test.sql.zip](storage/sql/test.sql.zip) | Sql database required for the quidPHP testsuite
-- [testsuite/Boot.php](testsuite/Boot.php) | Class for booting the quidPHP testsuite
+- [storage/sql/test.sql.zip](storage/sql/test.sql.zip) | Sql database required for the QuidPHP testsuite
+- [testsuite/Boot.php](testsuite/Boot.php) | class for booting the testsuite
 
 ## Test suite
 The QuidPHP test suite contains about 14000 assertions which can thoroughly test a setup. In order to run the test suite, follow the Installation steps and then do the following:
