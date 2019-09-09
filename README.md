@@ -54,10 +54,10 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [private/sql/project.sql.zip](private/sql/project.sql.zip) | Minimal database structure required
 - [public/.htaccess](public/.htaccess) | Simple apache directive file, requires mod_rewrite
 - [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
-- [public/index.php](public/.htaccess) | Index file for booting the application
-- [public/testsuite.php](public/.htaccess) | File for booting the quidPHP testsuite
+- [public/index.php](public/index.php) | Index file for booting the application
+- [public/testsuite.php](public/testsuite.php) | File for booting the quidPHP testsuite
 - [testsuite/Boot.php](public/.htaccess) | Class for booting the quidPHP testsuite
-- [testsuite/test.sql.zip](public/.htaccess) | Sql database required for the quidPHP testsuite
+- [testsuite/test.sql.zip](public/test.sql.zip) | Sql database required for the quidPHP testsuite
 
 ## Test suite
 - TODO
