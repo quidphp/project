@@ -67,7 +67,7 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [scss/app/include.scss](scss/app/include.scss) | Scss stylesheet for declaring variables and mixins
 - [scss/app/style.scss](scss/app/style.scss) | Scss stylesheet for basic styles
 - [sql/project.sql.zip](sql/project.sql.zip) | Minimal database structure required
-- [sql/test.sql.zip](sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
+- [sql/testsuite.sql.zip](sql/testsuite.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
 - [src/Boot.php](src/Boot.php) | Class for booting the application
 - [src/Session.php](src/Session.php) | Class for managing the session
 - [src/App/Error.php](src/App/Error.php) | Class for the error route of the app
@@ -79,7 +79,7 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 
 ## Test suite
 **QuidPHP/Project** test suite contains about 14000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
-1. Import [sql/test.sql.zip](sql/test.sql.zip) within a new Mysql/MariaDB database.
+1. Import [sql/testsuite.sql.zip](sql/testsuite.sql.zip) within a new Mysql/MariaDB database.
 2. Update the scheme hosts and database parameters within the [env.php](env.php) file. Note that will now be booting assert, not app.
 3. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
 4. Please delete the test suite files once the run has been successful.
