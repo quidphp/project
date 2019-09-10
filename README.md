@@ -19,7 +19,7 @@ This repository contains a sample project built on top of the QuidPHP framework.
 ``` bash
 $ composer create-project quidphp/project
 ```
-On the prompt "Do you want to remove the existing VCS (.git, .svn..) history?", enter Y.
+On the prompt *Do you want to remove the existing VCS (.git, .svn..) history?*, enter Y.
 
 Once this is complete, simply follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
