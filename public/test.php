@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// testsuite
+// test
 // file for booting the QuidPHP testsuite (can be deleted)
 (function() {
     if(!empty($_SERVER['REQUEST_SCHEME']) && !empty($_SERVER['HTTP_HOST']) && !empty($_SERVER['REQUEST_URI']))

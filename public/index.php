@@ -13,7 +13,7 @@ declare(strict_types=1);
         {
             require_once $config['path']['vendor'].'/autoload.php';
 
-            require $config['path']['private'].'/src/Boot.php';
+            require $config['path']['src'].'/Boot.php';
             Project\Boot::start($config);
         }
     }

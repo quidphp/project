@@ -25,9 +25,9 @@ class Boot extends Core\Boot
                         'wrapper'=>['#wrapper']]]],
             'compileScss'=>[
                 '[publicCss]/app.css'=>[
-                    0=>'[privateScss]/app/app.scss']],
+                    0=>'[scss]/app/app.scss']],
             'concatenateJs'=>[
-                '[publicJs]/app.js'=>'[privateJs]/app']]
+                '[publicJs]/app.js'=>'[js]/app']]
     ];
 
 

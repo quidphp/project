@@ -7,7 +7,7 @@ use Quid\Orm;
 use Quid\Main;
 use Quid\Base;
 
-// boot
+// test
 // class for booting the testsuite (can be deleted)
 class Boot extends Core\Boot
 {
