@@ -31,6 +31,7 @@ Once this is complete, simply follow these steps:
 - PHP 7.2+ with fileinfo, curl, openssl, posix, PDO and pdo_mysql
 - Mysql or MariaDB database
 
+### PHP INI
 The following PHP INI directives are also required:
 - post_max_size must be at least 1MB
 - post_max_size must be larger than upload_max_filesize
