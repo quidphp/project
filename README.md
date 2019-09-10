@@ -17,7 +17,7 @@ This repository contains a sample project built on top of the QuidPHP framework.
 ## Installation
 **QuidPHP/Project** can be easily installed with [Composer](https://getcomposer.org). It is available on [Packagist](https://packagist.org/packages/quidphp/project).
 ``` bash
-$ composer create-project quidphp/project
+$ composer create-project quidphp/project --prefer-dist
 ```
 On the prompt *Do you want to remove the existing VCS (.git, .svn..) history?*, enter Y.
 
@@ -32,7 +32,7 @@ Once this is complete, simply follow these steps:
 ## Requirement
 **QuidPHP/Project** requires the following:
 - Apache server with mod_rewrite
-- PHP 7.2+ with fileinfo, curl, openssl, posix, PDO and pdo_mysql
+- PHP 7.2+ with fileinfo, curl, openssl, PDO and pdo_mysql
 - Mysql or MariaDB database
 
 The following PHP INI directives are also required:

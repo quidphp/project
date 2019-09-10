@@ -100,7 +100,7 @@ class Boot extends Core\Boot
                     'ormTableSibling'=>['truncate'=>true]]]],
         'service'=>[
             'ldap'=>[Core\Service\Ldap::class,['host'=>'james.com','port'=>388]],
-            'mailer'=>[Core\Service\PhpMailer::class,['host'=>'smtp.gmail.com','port'=>587,'encryption'=>'tls','username'=>'noreply@makeitrealplay.com','password'=>'Mir21209!','name'=>'James']]],
+            'mailer'=>[Core\Service\PhpMailer::class,['host'=>'smtp.gmail.com','port'=>587,'encryption'=>'tls','username'=>'james@james.com','password'=>'james','name'=>'James']]],
         '@dev'=>[
             'callable'=>[
                 'uriOptionImg'=>[Base\Html::class,'setUriOption','img',['append'=>false,'exists'=>false]],
