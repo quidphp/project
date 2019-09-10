@@ -23,6 +23,6 @@ return [
         'db'=>['mysql:host=localhost;dbname=project','','']],
 
     '@assert'=>[
-        'db'=>['mysql:host=localhost;dbname=testsuite','','']]
+        'db'=>['mysql:host=localhost;dbname=projectTest','','']]
 ];
 ?>

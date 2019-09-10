@@ -16,7 +16,7 @@ declare(strict_types=1);
         {
             require_once $config['path']['vendor'].'/autoload.php';
 
-            require dirname(__DIR__).'/testsuite.php';
+            require dirname(__DIR__).'/test.php';
             Quid\TestSuite\Boot::start($config);
         }
     }
