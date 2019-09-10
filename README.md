@@ -77,7 +77,7 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [storage/sql/test.sql.zip](storage/sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
 
 ## Test suite
-The QuidPHP test suite contains about 14000 assertions which can thoroughly test a setup. In order to run the test suite, follow the Installation steps and then do the following:
+**QuidPHP/Project** test suite contains about 14000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
 1. Import [storage/sql/test.sql.zip](storage/sql/test.sql.zip) within a new Mysql/MariaDB database.
 2. Update the scheme hosts and database parameters within the [env.php](env.php) file. Note that will now be booting assert, not app.
 3. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
