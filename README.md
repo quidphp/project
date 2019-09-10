@@ -1,9 +1,9 @@
 # QuidPHP/Project
-[![Release](https://img.shields.io/github/v/release/quidsrc/project)](https://packagist.org/packages/quidsrc/project)
-[![License](https://img.shields.io/github/license/quidsrc/project)](https://github.com/quidsrc/project/blob/master/LICENSE)
-[![PHP Version](https://img.shields.io/packagist/php-v/quidsrc/project)](https://www.php.net)
+[![Release](https://img.shields.io/github/v/release/quidphp/project)](https://packagist.org/packages/quidphp/project)
+[![License](https://img.shields.io/github/license/quidphp/project)](https://github.com/quidphp/project/blob/master/LICENSE)
+[![PHP Version](https://img.shields.io/packagist/php-v/quidphp/project)](https://www.php.net)
 [![Style CI](https://styleci.io/repos/203834987/shield)](https://styleci.io)
-[![Code Size](https://img.shields.io/github/languages/code-size/quidsrc/project)](https://github.com/quidsrc/project)
+[![Code Size](https://img.shields.io/github/languages/code-size/quidphp/project)](https://github.com/quidphp/project)
 
 ## About
 This repository contains a sample project built on top of the QuidPHP framework. It also offers a script to run the full QuidPHP test suite.
@@ -12,9 +12,9 @@ This repository contains a sample project built on top of the QuidPHP framework.
 **QuidPHP/Project** is available as an open-source software under the [MIT license](LICENSE).
 
 ## Installation
-**QuidPHP/Project** can be easily installed with [Composer](https://getcomposer.org). It is available on [Packagist](https://packagist.org/packages/quidsrc/project).
+**QuidPHP/Project** can be easily installed with [Composer](https://getcomposer.org). It is available on [Packagist](https://packagist.org/packages/quidphp/project).
 ``` bash
-$ composer create-project quidsrc/project
+$ composer create-project quidphp/project
 ```
 
 Once this is complete, simply follow these steps:
@@ -40,11 +40,11 @@ The following PHP INI directives are also required:
 
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
-- [quidsrc/base](https://github.com/quidsrc/base) - Quid\Base - PHP library that provides a large set of low-level static methods
-- [quidsrc/main](https://github.com/quidsrc/main) | Quid\Main - PHP library that provides a set of base objects and collections 
-- [quidsrc/orm](https://github.com/quidsrc/orm) | Quid\Orm - PHP library that provides database access and a comprehensive Object-Relational Mapper
-- [quidsrc/routing](https://github.com/quidsrc/routing) | Quid\Routing - PHP library that provides a simple route matching and triggering procedure
-- [quidsrc/core](https://github.com/quidsrc/core) | PHP library that provides an extendable platform to create dynamic applications
+- [quidphp/base](https://github.com/quidphp/base) - Quid\Base - PHP library that provides a large set of low-level static methods
+- [quidphp/main](https://github.com/quidphp/main) | Quid\Main - PHP library that provides a set of base objects and collections 
+- [quidphp/orm](https://github.com/quidphp/orm) | Quid\Orm - PHP library that provides database access and a comprehensive Object-Relational Mapper
+- [quidphp/routing](https://github.com/quidphp/routing) | Quid\Routing - PHP library that provides a simple route matching and triggering procedure
+- [quidphp/core](https://github.com/quidphp/core) | PHP library that provides an extendable platform to create dynamic applications
 - [verot/class.upload.php](https://github.com/verot/class.upload.php) | Verot\Upload - A popular PHP class used for resizing images
 - [phpmailer/phpmailer](https://github.com/phpmailer/phpmailer) | PHPMailer\PHPMailer - The classic email sending library for PHP
 - [tedivm/jshrink](https://github.com/tedious/JShrink) | JShrink - Javascript Minifier built in PHP
