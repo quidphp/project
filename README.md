@@ -59,6 +59,7 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 **QuidPHP/Project** contains 20 files. Here is an overview:
 - [env.php](env.php) | Declare environment data for the application
 - [test.php](test.php) | class for booting the testsuite (can be deleted)
+- [docs/index.md](docs/index.md) | Contains the documentation in markdown format (work in progress)
 - [js/app/app.js](js/app/app.js) | Main javaScript file for the app
 - [public/.htaccess](public/.htaccess) | Simple apache directive file, requires mod_rewrite
 - [public/favicon.ico](public/favicon.ico) | Generic favicon (16x16)
