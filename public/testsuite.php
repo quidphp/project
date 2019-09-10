@@ -11,12 +11,12 @@ declare(strict_types=1);
         $config['schemeHost']['dev/assert'] = $config['schemeHost']['dev/app'];
         $config['schemeHost']['prod/assert'] = $config['schemeHost']['prod/app'];
         unset($config['schemeHost']['dev/app'],$config['schemeHost']['prod/app']);
-        
+
         if(!empty($config['path']['vendor']))
         {
             require_once $config['path']['vendor'].'/autoload.php';
 
-            require dirname(__DIR__)."/testsuite.php";
+            require dirname(__DIR__).'/testsuite.php';
             Quid\TestSuite\Boot::start($config);
         }
     }

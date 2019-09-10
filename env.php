@@ -21,7 +21,7 @@ return [
 
     '@prod'=>[
         'db'=>['mysql:host=localhost;dbname=project','','']],
-    
+
     '@assert'=>[
         'db'=>['mysql:host=localhost;dbname=testsuite','','']]
 ];
