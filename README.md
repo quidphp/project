@@ -55,7 +55,7 @@ The following PHP INI directives are also required:
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
 
 ## Overview
-**QuidPHP/Project** contains 19 files. Here is an overview:
+**QuidPHP/Project** contains 20 files. Here is an overview:
 - [env.php](env.php) | Declare environment data for the application
 - [testsuite.php](testsuite.php) | class for booting the testsuite (can be deleted)
 - [js/app/app.js](js/app/app.js) | Main javaScript file for the app
@@ -66,6 +66,8 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [scss/app/app.scss](scss/app/app.scss) | Main scss stylesheet for the app
 - [scss/app/include.scss](scss/app/include.scss) | Scss stylesheet for declaring variables and mixins
 - [scss/app/style.scss](scss/app/style.scss) | Scss stylesheet for basic styles
+- [sql/project.sql.zip](sql/project.sql.zip) | Minimal database structure required
+- [sql/test.sql.zip](sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
 - [src/Boot.php](src/Boot.php) | Class for booting the application
 - [src/Session.php](src/Session.php) | Class for managing the session
 - [src/App/Error.php](src/App/Error.php) | Class for the error route of the app
@@ -73,8 +75,7 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [src/App/Robots.php](src/App/Robots.php) | Class for the robots.txt route of the app
 - [src/App/Sitemap.php](src/App/Sitemap.php) | Class for the automated sitemap.xml route of the app
 - [src/Row/User.php](src/Row/User.php) | Class for a row of the user table
-- [sql/project.sql.zip](sql/project.sql.zip) | Minimal database structure required
-- [sql/test.sql.zip](sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
+- [storage/public/media/lemur.jpg](storage/public/media/lemur.jpg) | Lemur photo took in Madagascar, this will be symlinked to *public/media/lemur.jpg*.
 
 ## Test suite
 **QuidPHP/Project** test suite contains about 14000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
