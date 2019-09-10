@@ -9,7 +9,9 @@ return [
     ],
 
     'path'=>[
-        'private'=>__DIR__.'/private',
+        'src'=>__DIR__.'/src',
+        'js'=>__DIR__.'/js',
+        'scss'=>__DIR__.'/scss',
         'storage'=>__DIR__.'/storage',
         'vendor'=>__DIR__.'/vendor'
     ],
@@ -18,6 +20,9 @@ return [
         'db'=>['mysql:host=localhost;dbname=project','','']],
 
     '@prod'=>[
-        'db'=>['mysql:host=localhost;dbname=project','','']]
+        'db'=>['mysql:host=localhost;dbname=project','','']],
+    
+    '@assert'=>[
+        'db'=>['mysql:host=localhost;dbname=testsuite','','']]
 ];
 ?>
