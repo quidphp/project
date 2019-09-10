@@ -81,4 +81,4 @@ The QuidPHP test suite contains about 14000 assertions which can thoroughly test
 4. Please delete the test suite files once the run has been successful.
 
 ### Known issue
-- On some setup, you will need to add your domain to the system hosts file. This is due with assertions involving the curl library.
+- On some setup, you will need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
