@@ -35,10 +35,10 @@ Once this is complete, simply follow these steps:
 - Mysql or MariaDB database
 
 The following PHP INI directives are also required:
-- post_max_size must be at least 1MB
-- post_max_size must be larger than upload_max_filesize
-- memory_limit must be at least 128MB
-- browscap needs to contain a valid path 
+- *post_max_size* must be at least 1MB
+- *post_max_size* must be larger than *upload_max_filesize*
+- *memory_limit* must be at least 128MB
+- *browscap* needs to contain a valid path 
 
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
