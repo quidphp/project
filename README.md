@@ -23,7 +23,7 @@ $ composer create-project quidphp/project
 Once this is complete, simply follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server (including subdirectories).
 2. Configure an Apache Virtual Host in order to have a domain pointing to the [public](public) document root.
-3. Import [storage/sql/project.sql.zip](storage/sql/project.sql.zip) within a new Mysql/MariaDB database.
+3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
 4. Update the scheme hosts and database parameters within the [env.php](env.php) file.
 5. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project. If you do, you will also need to change the namespace of the Boot class within the [public/index.php](public/index.php) entry file.
 6. From your web browser, enter the URL to the [public/index.php](public/index.php) entry file.
@@ -73,12 +73,12 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 - [src/App/Robots.php](src/App/Robots.php) | Class for the robots.txt route of the app
 - [src/App/Sitemap.php](src/App/Sitemap.php) | Class for the automated sitemap.xml route of the app
 - [src/Row/User.php](src/Row/User.php) | Class for a row of the user table
-- [storage/sql/project.sql.zip](storage/sql/project.sql.zip) | Minimal database structure required
-- [storage/sql/test.sql.zip](storage/sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
+- [sql/project.sql.zip](sql/project.sql.zip) | Minimal database structure required
+- [sql/test.sql.zip](sql/test.sql.zip) | Sql database required for the QuidPHP testsuite (can be deleted)
 
 ## Test suite
 **QuidPHP/Project** test suite contains about 14000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
-1. Import [storage/sql/test.sql.zip](storage/sql/test.sql.zip) within a new Mysql/MariaDB database.
+1. Import [sql/test.sql.zip](sql/test.sql.zip) within a new Mysql/MariaDB database.
 2. Update the scheme hosts and database parameters within the [env.php](env.php) file. Note that will now be booting assert, not app.
 3. From your web browser, enter the URL to the [public/testsuite.php](public/testsuite.php) entry file.
 4. Please delete the test suite files once the run has been successful.
