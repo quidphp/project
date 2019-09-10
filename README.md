@@ -42,7 +42,7 @@ The following PHP INI directives are also required:
 
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
-- [quidphp/base](https://github.com/quidphp/base) - Quid\Base - PHP library that provides a large set of low-level static methods
+- [quidphp/base](https://github.com/quidphp/base) - Quid\Base - PHP library that provides a set of low-level static methods
 - [quidphp/main](https://github.com/quidphp/main) | Quid\Main - PHP library that provides a set of base objects and collections 
 - [quidphp/orm](https://github.com/quidphp/orm) | Quid\Orm - PHP library that provides database access and a comprehensive Object-Relational Mapper
 - [quidphp/routing](https://github.com/quidphp/routing) | Quid\Routing - PHP library that provides a simple route matching and triggering procedure
