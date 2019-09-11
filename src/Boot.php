@@ -15,7 +15,6 @@ class Boot extends Core\Boot
         '@app'=>[
             'config'=>[
                 Core\Route::class=>[
-                    'metaTitle'=>['typeLabel'=>true],
                     'docOpen'=>[
                         'head'=>[
                             'css'=>[
