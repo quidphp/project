@@ -13,7 +13,6 @@ class Boot extends Core\Boot
 {
     // config
     public static $config = [
-        'db'=>['mysql:host=localhost;dbname=project','',''],
         'types'=>['assert'],
         'version'=>['assert'=>'1.0.1'],
         'lang'=>['en','fr'],
