@@ -23,6 +23,6 @@ return [
         'db'=>['mysql:host=localhost;port=3306;dbname=project','','']],
 
     '@assert'=>[
-        'db'=>['mysql:host=localhost;port=3306;dbname=projectTest','root','']]
+        'db'=>['mysql:host=localhost;port=3307;dbname=projectTest','root','']]
 ];
 ?>

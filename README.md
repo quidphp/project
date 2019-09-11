@@ -88,3 +88,4 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 
 ### Known issue
 - On some setup, you will need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
+- On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnfg). The table and column names need to be stored in their natural case.

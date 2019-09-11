@@ -11,7 +11,7 @@ use Quid\Base;
 // class for booting the testsuite (can be deleted)
 class Boot extends Core\Boot
 {
-    // attr, html (erreur sur unlink)
+    // attr, html, imageRaster (erreur sur unlink)
     // csv, dir, file, finder (pas fait)
 
     // config
@@ -175,7 +175,7 @@ class Boot extends Core\Boot
     public function beforeAssert():void
     {
         Base\Response::ok();
-        Base\Timezone::set('America/New_York');
+        Base\Timezone::set('America/New_York',true);
         Base\Dir::empty('[assertCommon]');
         Base\Dir::empty('[assertMedia]');
 
