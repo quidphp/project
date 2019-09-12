@@ -221,7 +221,7 @@ class Boot extends Core\Boot
     {
         if(!Base\Server::isWindows())
         Base\Dir::emptyAndUnlink('[assert]');
-        
+
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
         Base\Dir::emptyAndUnlink('[assertMedia]');
