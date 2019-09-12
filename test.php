@@ -182,7 +182,7 @@ class Boot extends Core\Boot
     {
         Base\Response::ok();
         Base\Timezone::set('America/New_York',true);
-        
+
         Base\Dir::empty('[assertCommon]');
         Base\Dir::empty('[assertCurrent]');
         Base\Dir::empty('[assertMedia]');
