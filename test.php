@@ -26,8 +26,7 @@ class Boot extends Core\Boot
             'overview'=>1,
             'db'=>null,
             'exclude'=>[
-                Test\Base\Csv::class,Test\Base\Dir::class,Test\Base\File::class,Test\Base\Finder::class,Test\Base\Res::class,Test\Base\Symlink::class, // TODO
-                Test\Main\File::class,Test\Main\Files::class,Test\Main\Res::class,
+                Test\Main\Files::class,Test\Main\Res::class,
                 Test\Core\Cell::class,Test\Core\File::class,Test\Core\Files::class,
                 Test\Lemur::class,Test\Site::class],
             'fileSession'=>Core\File\Session::class,
@@ -220,7 +219,9 @@ class Boot extends Core\Boot
     // afterAssert
     public function afterAssert():void
     {
+        if(!Base\Server::isWindows())
         Base\Dir::emptyAndUnlink('[assert]');
+        
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
         Base\Dir::emptyAndUnlink('[assertMedia]');
