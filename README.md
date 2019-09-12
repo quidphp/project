@@ -31,9 +31,10 @@ Once this is complete, simply follow these steps:
 
 ## Requirement
 **QuidPHP/Project** requires the following:
-- Apache server with mod_rewrite
-- PHP 7.2+ with fileinfo, curl, openssl, PDO and pdo_mysql
+- PHP 7.3+ with curl, fileinfo, json, mbstring, pdo, pdo_mysql and openssl
+- Apache or Nginx server
 - Mysql or MariaDB database
+- MacOs, Windows or Linux OS
 
 The following PHP INI directives are also required:
 - *post_max_size* must be at least 1MB
