@@ -13,13 +13,6 @@
     ],
     "require": {
         "php": ">=7.3.0",
-		"ext-curl": "*",
-        "ext-fileinfo": "*",
-        "ext-json": "*",
-        "ext-mbstring": "*",
-		"ext-pdo": "*",
-		"ext-pdo_mysql": "*",
-        "ext-openssl": "*",
 		"quidphp/base": "*",
 		"quidphp/main": "*",
 		"quidphp/orm": "*",

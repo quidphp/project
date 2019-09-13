@@ -31,17 +31,31 @@ Once this is complete, simply follow these steps:
 
 ## Requirement
 **QuidPHP/Project** requires the following:
-- PHP 7.3+ with curl, fileinfo, json, mbstring, pdo, pdo_mysql and openssl
-- Apache or Nginx server
+- PHP 7.3+ with these extensions:
+    - curl
+    - date
+    - fileinfo
+    - gd
+    - iconv
+    - json
+    - mbstring
+    - pcre
+    - PDO
+    - pdo_mysql
+    - openssl
+    - session
+    - SimpleXML
+    - Zend OPcache
+    - zip
+- The following PHP INI directives are also required:
+    - *post_max_size* must be at least 1MB
+    - *post_max_size* must be larger than *upload_max_filesize*
+    - *memory_limit* must be at least 128MB
+    - *browscap* needs to contain a valid path 
 - Mysql or MariaDB database
-- MacOs, Windows or Linux
-
-The following PHP INI directives are also required:
-- *post_max_size* must be at least 1MB
-- *post_max_size* must be larger than *upload_max_filesize*
-- *memory_limit* must be at least 128MB
-- *browscap* needs to contain a valid path 
-
+- Apache or Nginx server
+- Compatible with MacOs, Windows and Linux
+    
 ## Dependency
 **QuidPHP/Project** has the following dependencies:
 - [quidphp/base](https://github.com/quidphp/base) - Quid\Base - PHP library that provides a set of low-level static methods
@@ -88,5 +102,5 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 4. Please delete the test suite files once the run has been successful.
 
 ### Known issue
-- On some setup, you will need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
+- On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
 - On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.

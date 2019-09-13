@@ -222,13 +222,10 @@ class Boot extends Core\Boot
     // afterAssert
     public function afterAssert():void
     {
-        if(!Base\Server::isWindows())
         Base\Dir::emptyAndUnlink('[assert]');
-
+        Base\Dir::emptyAndUnlink('[assertStorage]');
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
-        Base\Dir::emptyAndUnlink('[assertMedia]');
-        Base\Dir::emptyAndUnlink('[assertStorage]');
 
         $truncate = $this->attr('assert/truncate');
         if(is_array($truncate))
