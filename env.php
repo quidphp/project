@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'schemeHost'=>[
-        'dev/app'=>'http://project.dev',
+        'dev/app'=>'http://project.test',
         'prod/app'=>'https://project.com'
     ],
 
