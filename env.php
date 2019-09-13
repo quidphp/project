@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'schemeHost'=>[
-        'dev/app'=>'http://project.ol',
+        'dev/app'=>'http://project.dev',
         'prod/app'=>'https://project.com'
     ],
 
@@ -23,6 +23,6 @@ return [
         'db'=>['mysql:host=localhost;port=3306;dbname=project','','']],
 
     '@assert'=>[
-        'db'=>['mysql:host=localhost;port=3307;dbname=projectTest','root','']]
+        'db'=>['mysql:host=localhost;port=3306;dbname=projectTest','root','']]
 ];
 ?>
