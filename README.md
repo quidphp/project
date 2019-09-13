@@ -100,6 +100,6 @@ All dependencies will be resolved by using the [Composer](https://getcomposer.or
 3. From your web browser, enter the URL to the [public/test.php](public/test.php) entry file.
 4. Please delete the test suite files once the run has been successful.
 
-### Known issue
+### Known issues
 - On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
 - On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.
