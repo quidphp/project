@@ -22,7 +22,7 @@ $ composer create-project quidphp/project --prefer-dist
 
 Once this is complete, simply follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
-2. Configure an Apache/Nginx Virtual Host in order to have a domain pointing to the [public](public) document root.
+2. Configure an Apache Virtual Host or Nginx Server Block in order to have a domain pointing to the [public](public) document root.
 3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
 4. Update the scheme hosts and database parameters within the [env.php](env.php) file.
 5. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project. If you do, you will also need to change the namespace of the Boot class within the [public/index.php](public/index.php) entry file.
