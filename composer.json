@@ -1,27 +1,24 @@
 {
-	"name": "quidphp/project",
+    "name": "quidphp/project",
     "type": "project",
     "description": "Create a new project using QuidPHP",
     "keywords": ["quidphp","quid","framework"],
     "homepage": "https://quidphp.com",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Pierre-Philippe Emond",
-            "email": "emondpph@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Pierre-Philippe Emond",
+        "email": "emondpph@gmail.com"
+    }],
     "require": {
         "php": ">=7.3.0",
-		"quidphp/base": "*",
-		"quidphp/main": "*",
-		"quidphp/orm": "*",
-		"quidphp/routing": "*",
-		"quidphp/core": "*",
-		"verot/class.upload.php": "^2.0",
-		"phpmailer/phpmailer": "^6.0",
-		"tedivm/jshrink": "^1.3",
-		"scssphp/scssphp": "^1.0"
-    },
-	"minimum-stability": "dev"
+        "quidphp/base": "5.27.*",
+        "quidphp/main": "5.27.*",
+        "quidphp/orm": "5.27.*",
+        "quidphp/routing": "5.27.*",
+        "quidphp/core": "5.27.*",
+        "verot/class.upload.php": "^2.0",
+        "phpmailer/phpmailer": "^6.0",
+        "tedivm/jshrink": "^1.3",
+        "scssphp/scssphp": "^1.0"
+    }
 }
