@@ -71,8 +71,10 @@ Once this is complete, simply follow these steps:
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
 
 ## Overview
-**QuidPHP/Project** contains 20 files. Here is an overview:
+**QuidPHP/Project** contains 22 files. Here is an overview:
+- [composer.json](composer.json) - File declaring all Composer PHP dependencies
 - [env-default.php](env-default.php) - Declare environment data for the application, copy this file and rename to env.php
+- [.gitignore](.gitignore) - Standard .gitignore file for the project
 - [test.php](test.php) - class for booting the testsuite (can be deleted)
 - [docs/index.md](docs/index.md) - Contains the documentation in markdown format (work in progress)
 - [js/app/app.js](js/app/app.js) - Main javaScript file for the app
