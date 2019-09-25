@@ -24,7 +24,7 @@ Once this is complete, simply follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
 2. Configure an Apache Virtual Host or Nginx Server Block in order to have a domain pointing to the [public](public) folder document root.
 3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
-4. Duplicate the [env-default.php](env-default.php) file and rename it to env.php.
+4. Duplicate the [env-default.php](env-default.php) file and rename it to **env.php**.
 5. Update the scheme hosts and database parameters within the **env.php** file.
 6. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project. If you do, you will also need to change the namespace of the Boot class within the [public/index.php](public/index.php) entry file.
 7. From your web browser, enter the URL to the [public/index.php](public/index.php) entry file.
