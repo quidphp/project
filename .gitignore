@@ -1,3 +1,8 @@
 .DS_Store
 ._*,
 Thumbs.db
+/vendor/*
+/public/*
+/env.php
+!/public/index.php
+!/public/.htaccess

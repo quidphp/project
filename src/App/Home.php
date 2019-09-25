@@ -17,7 +17,6 @@ class Home extends Core\Route\Home
     {
         $r = $this->docOpen();
         $r .= Html::h1('Hello World');
-        $r .= Html::img('[media]/lemur.jpg');
         $r .= $this->docClose();
 
         return $r;

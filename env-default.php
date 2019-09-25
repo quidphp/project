@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-// declare environment data for the application
+// declare environment data for the application, copy this file and rename to env.php
 
 return [
     'schemeHost'=>[
