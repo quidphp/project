@@ -39,7 +39,8 @@ class Boot extends Core\Boot
             'errorHtmlDepth'=>[Core\Error::class,'setDefaultHtmlDepth',true],
             'dbHistory'=>[Core\Db::class,'setDefaultHistory',true],
             'mailerDispatch'=>[Main\ServiceMailer::class,'setDispatch','queue'],
-            'ormExceptionQuery'=>[Orm\Exception::class,'showQuery',true]],
+            'ormExceptionQuery'=>[Orm\Exception::class,'showQuery',true],
+            'ormCatchableExceptionQuery'=>[Orm\CatchableException::class,'showQuery',true]],
         'dbOption'=>[
             'tables'=>[
                 'ormTable'=>['test'=>'ok']],
@@ -108,7 +109,8 @@ class Boot extends Core\Boot
                 'errorHtmlDepth'=>[Core\Error::class,'setDefaultHtmlDepth',true],
                 'dbHistory'=>[Core\Db::class,'setDefaultHistory',true],
                 'mailerDispatch'=>[Main\ServiceMailer::class,'setDispatch','queue'],
-                'ormExceptionQuery'=>[Orm\Exception::class,'showQuery',true]]]
+                'ormExceptionQuery'=>[Orm\Exception::class,'showQuery',true],
+                'ormCatchableExceptionQuery'=>[Orm\CatchableException::class,'showQuery',true]]]
     ];
 
 
