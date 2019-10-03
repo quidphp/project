@@ -311,8 +311,8 @@ class ActivatePassword extends Core\Route\ActivatePassword
     }
 }
 
-//__config
-ActivatePassword::__config();
+//__init
+ActivatePassword::__init();
 });
 }
 namespace Quid\TestSuite\Assert {
@@ -338,8 +338,8 @@ class Contact extends Core\Route
     }
 }
 
-//__config
-Contact::__config();
+//__init
+Contact::__init();
 });
 }
 namespace Quid\TestSuite\Assert {
@@ -361,8 +361,8 @@ class Error extends Core\Route\Error
     }
 }
 
-//__config
-Error::__config();
+//__init
+Error::__init();
 });
 }
 namespace Quid\TestSuite\Assert {
@@ -384,8 +384,8 @@ class Home extends Core\Route\Home
     }
 }
 
-//__config
-Home::__config();
+//__init
+Home::__init();
 });
 }
 namespace Quid\TestSuite\Assert {
@@ -407,8 +407,8 @@ class Sitemap extends Core\Route\Sitemap
     }
 }
 
-//__config
-Sitemap::__config();
+//__init
+Sitemap::__init();
 });
 }
 
@@ -436,8 +436,8 @@ class System extends Core\Route
     }
 }
 
-//__config
-System::__config();
+//__init
+System::__init();
 });
 }
 
@@ -482,8 +482,8 @@ class OrmCell__Name extends Core\Col
     }
 }
 
-//__config
-OrmCell__Name::__config();
+//__init
+OrmCell__Name::__init();
 });
 }
 namespace Quid\TestSuite\Col {
@@ -498,8 +498,8 @@ class UserIds extends Core\Col\Set
     public static $config = [];
 }
 
-//__config
-UserIds::__config();
+//__init
+UserIds::__init();
 });
 }
 
@@ -519,8 +519,8 @@ class User extends Core\Role\User
     ];
 }
 
-//__config
-User::__config();
+//__init
+User::__init();
 });
 }
 
@@ -555,8 +555,8 @@ class OrmCell extends Core\Row
     ];
 }
 
-//__config
-OrmCell::__config();
+//__init
+OrmCell::__init();
 });
 }
 namespace Quid\TestSuite\Row {
@@ -597,8 +597,8 @@ class OrmCol extends Core\Row
     }
 }
 
-//__config
-OrmCol::__config();
+//__init
+OrmCol::__init();
 });
 }
 namespace Quid\TestSuite\Row {
@@ -620,8 +620,8 @@ class OrmRow extends Core\Row
     ];
 }
 
-//__config
-OrmRow::__config();
+//__init
+OrmRow::__init();
 });
 }
 namespace Quid\TestSuite\Row {
@@ -645,8 +645,8 @@ class OrmTableSibling extends Core\Row
     }
 }
 
-//__config
-OrmTableSibling::__config();
+//__init
+OrmTableSibling::__init();
 });
 }
 namespace Quid\TestSuite\Row {
@@ -673,8 +673,8 @@ class User extends Core\Row\User
     }
 }
 
-//__config
-User::__config();
+//__init
+User::__init();
 });
 }
 
@@ -692,8 +692,8 @@ class OrmDb extends Core\Rows
     public static $config = [];
 }
 
-//__config
-OrmDb::__config();
+//__init
+OrmDb::__init();
 });
 }
 
@@ -729,8 +729,8 @@ class OrmDb extends Core\Table
     }
 }
 
-//__config
-OrmDb::__config();
+//__init
+OrmDb::__init();
 });
 }
 namespace Quid\TestSuite\Table {
@@ -748,8 +748,8 @@ class OrmTable extends Core\Table
     ];
 }
 
-//__config
-OrmTable::__config();
+//__init
+OrmTable::__init();
 });
 }
 ?>
