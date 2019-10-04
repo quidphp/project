@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Quid\TestSuite {
+namespace Quid\Suite {
 use Quid\Test;
 use Quid\Core;
 use Quid\Orm;
@@ -126,7 +126,7 @@ class Boot extends Core\Boot
             $closure = function(string $value) {
                 return (stripos($value,'quid\\test') === 0)? true:false;
             };
-            $target = array_keys(Base\Autoload::allPsr4($closure,true));
+            $target = Main\Autoload::findNamespace($closure,true,true,true);
 
             if(!empty($exclude))
             $target = Base\Arr::valuesStrip($exclude,$target);
@@ -228,7 +228,7 @@ class Boot extends Core\Boot
         Base\Dir::emptyAndUnlink('[assertStorage]');
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
-
+        
         $truncate = $this->attr('assert/truncate');
         if(is_array($truncate))
         {
@@ -288,10 +288,10 @@ class Boot extends Core\Boot
 
 
 /* ASSERT  */
-namespace Quid\TestSuite\Assert {
+namespace Quid\Suite\Assert {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'ActivatePassword',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'ActivatePassword',function() {
 
 // activatePassword
 class ActivatePassword extends Core\Route\ActivatePassword
@@ -310,23 +310,20 @@ class ActivatePassword extends Core\Route\ActivatePassword
         return static::class;
     }
 }
-
-//__init
-ActivatePassword::__init();
 });
 }
-namespace Quid\TestSuite\Assert {
-use Quid\TestSuite;
+namespace Quid\Suite\Assert {
+use Quid\Suite;
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Contact',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'Contact',function() {
 
 // contact
 class Contact extends Core\Route
 {
     // config
     public static $config = [
-        'row'=>TestSuite\Row\OrmCol::class,
+        'row'=>Suite\Row\OrmCol::class,
         'path'=>['en'=>'contact','fr'=>'contact']
     ];
 
@@ -337,15 +334,12 @@ class Contact extends Core\Route
         return static::class;
     }
 }
-
-//__init
-Contact::__init();
 });
 }
-namespace Quid\TestSuite\Assert {
+namespace Quid\Suite\Assert {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Error',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'Error',function() {
 
 // error
 class Error extends Core\Route\Error
@@ -360,15 +354,12 @@ class Error extends Core\Route\Error
         return static::class;
     }
 }
-
-//__init
-Error::__init();
 });
 }
-namespace Quid\TestSuite\Assert {
+namespace Quid\Suite\Assert {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Home',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'Home',function() {
 
 // home
 class Home extends Core\Route\Home
@@ -383,15 +374,12 @@ class Home extends Core\Route\Home
         return static::class;
     }
 }
-
-//__init
-Home::__init();
 });
 }
-namespace Quid\TestSuite\Assert {
+namespace Quid\Suite\Assert {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Assert",'Sitemap',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'Sitemap',function() {
 
 // sitemap
 class Sitemap extends Core\Route\Sitemap
@@ -406,18 +394,15 @@ class Sitemap extends Core\Route\Sitemap
         return static::class;
     }
 }
-
-//__init
-Sitemap::__init();
 });
 }
 
 
 /* CMS */
-namespace Quid\TestSuite\Cms {
+namespace Quid\Suite\Cms {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Cms",'System',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Cms",'System',function() {
 
 // system
 class System extends Core\Route
@@ -435,20 +420,17 @@ class System extends Core\Route
         return '';
     }
 }
-
-//__init
-System::__init();
 });
 }
 
 
 /* COL */
-namespace Quid\TestSuite\Col {
+namespace Quid\Suite\Col {
 use Quid\Core;
 use Quid\Orm;
 use Quid\Base;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Col",'OrmCell__Name',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Col",'OrmCell__Name',function() {
 
 // ormCell__Name
 class OrmCell__Name extends Core\Col
@@ -481,15 +463,12 @@ class OrmCell__Name extends Core\Col
         return $return;
     }
 }
-
-//__init
-OrmCell__Name::__init();
 });
 }
-namespace Quid\TestSuite\Col {
+namespace Quid\Suite\Col {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Col",'UserIds',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Col",'UserIds',function() {
 
 // userIds
 class UserIds extends Core\Col\Set
@@ -497,18 +476,15 @@ class UserIds extends Core\Col\Set
     // config
     public static $config = [];
 }
-
-//__init
-UserIds::__init();
 });
 }
 
 
 /* ROLE */
-namespace Quid\TestSuite\Role {
+namespace Quid\Suite\Role {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Role",'User',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Role",'User',function() {
 
 // user
 class User extends Core\Role\User
@@ -518,19 +494,16 @@ class User extends Core\Role\User
         'user'=>'extended'
     ];
 }
-
-//__init
-User::__init();
 });
 }
 
 
 /* ROW */
-namespace Quid\TestSuite\Row {
-use Quid\TestSuite;
+namespace Quid\Suite\Row {
+use Quid\Suite;
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Row",'OrmCell',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmCell',function() {
 
 // ormCell
 class OrmCell extends Core\Row
@@ -539,7 +512,7 @@ class OrmCell extends Core\Row
     public static $config = [
         'cols'=>[
             'googleMaps'=>['required'=>false],
-            'name'=>['class'=>TestSuite\Col\OrmCell__Name::class],
+            'name'=>['class'=>Suite\Col\OrmCell__Name::class],
             'enum'=>['tag'=>'radio','relation'=>'test'],
             'set'=>['set'=>true,'relation'=>[2=>'ok',3=>'well',4=>'OK']],
             'integer'=>['cell'=>Core\Cell\Integer::class],
@@ -554,17 +527,14 @@ class OrmCell extends Core\Row
                 'version'=>['large'=>[55,'jpg','crop',600,300]]]]
     ];
 }
-
-//__init
-OrmCell::__init();
 });
 }
-namespace Quid\TestSuite\Row {
-use Quid\TestSuite;
+namespace Quid\Suite\Row {
+use Quid\Suite;
 use Quid\Core;
 use Quid\Orm;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Row",'OrmCol',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmCol',function() {
 
 // ormCol
 class OrmCol extends Core\Row
@@ -581,7 +551,7 @@ class OrmCol extends Core\Row
             'rangeInt'=>['relation'=>8],
             'multi'=>['complex'=>'multiselect','set'=>true,'relation'=>'test'],
             'check'=>['set'=>true,'relation'=>['min'=>0,'max'=>20,'inc'=>2]],
-            'user_ids'=>['class'=>TestSuite\Col\UserIds::class],
+            'user_ids'=>['class'=>Suite\Col\UserIds::class],
             'medias'=>['media'=>6],
             'media'=>['version'=>[
                 'small'=>[50,'jpg','crop',300,200],
@@ -596,16 +566,13 @@ class OrmCol extends Core\Row
         return ['test','test2','test3'];
     }
 }
-
-//__init
-OrmCol::__init();
 });
 }
-namespace Quid\TestSuite\Row {
-use Quid\TestSuite;
+namespace Quid\Suite\Row {
+use Quid\Suite;
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Row",'OrmRow',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmRow',function() {
 
 // ormRow
 class OrmRow extends Core\Row
@@ -615,19 +582,16 @@ class OrmRow extends Core\Row
         'where'=>[true,'name_en'=>'test'],
         'order'=>['date'=>'desc'],
         '@cms'=>[
-            'route'=>['contact'=>TestSuite\Assert\Contact::class]
+            'route'=>['contact'=>Suite\Assert\Contact::class]
         ]
     ];
 }
-
-//__init
-OrmRow::__init();
 });
 }
-namespace Quid\TestSuite\Row {
+namespace Quid\Suite\Row {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Row",'OrmTableSibling',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmTableSibling',function() {
 
 // ormTableSibling
 class OrmTableSibling extends Core\Row
@@ -644,16 +608,13 @@ class OrmTableSibling extends Core\Row
         return $this->cellName();
     }
 }
-
-//__init
-OrmTableSibling::__init();
 });
 }
-namespace Quid\TestSuite\Row {
-use Quid\TestSuite;
+namespace Quid\Suite\Row {
+use Quid\Suite;
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Row",'User',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Row",'User',function() {
 
 // user
 class User extends Core\Row\User
@@ -669,21 +630,18 @@ class User extends Core\Row\User
     // activatePasswordRoute
     public function activatePasswordRoute():string
     {
-        return TestSuite\Assert\ActivatePassword::class;
+        return Suite\Assert\ActivatePassword::class;
     }
 }
-
-//__init
-User::__init();
 });
 }
 
 
 /* ROWS */
-namespace Quid\TestSuite\Rows {
+namespace Quid\Suite\Rows {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Rows",'OrmDb',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Rows",'OrmDb',function() {
 
 // ormDb
 class OrmDb extends Core\Rows
@@ -691,19 +649,16 @@ class OrmDb extends Core\Rows
     // config
     public static $config = [];
 }
-
-//__init
-OrmDb::__init();
 });
 }
 
 
 /* TABLE */
-namespace Quid\TestSuite\Table {
+namespace Quid\Suite\Table {
 use Quid\Core;
 use Quid\Base;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Table",'OrmDb',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Table",'OrmDb',function() {
 
 // ormDb
 class OrmDb extends Core\Table
@@ -728,28 +683,22 @@ class OrmDb extends Core\Table
         return ['what'=>['id'],'where'=>['id'=>2]];
     }
 }
-
-//__init
-OrmDb::__init();
 });
 }
-namespace Quid\TestSuite\Table {
+namespace Quid\Suite\Table {
 use Quid\Core;
 
-\Quid\Main\Autoload::setClosure("Quid\TestSuite\Table",'OrmTable',function() {
+\Quid\Main\Autoload::setClosure("Quid\Suite\Table",'OrmTable',function() {
 
 // ormTable
 class OrmTable extends Core\Table
 {
     // config
     public static $config = [
-        'parent'=>'ormDb',
+        'parent'=>OrmDb::class,
         'relation'=>['onGet'=>true,'what'=>['id','name_en','dateAdd'],'output'=>'[dateAdd] [name_en] _ [id]','order'=>['name_en'=>'desc']]
     ];
 }
-
-//__init
-OrmTable::__init();
 });
 }
 ?>
