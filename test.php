@@ -228,7 +228,7 @@ class Boot extends Core\Boot
         Base\Dir::emptyAndUnlink('[assertStorage]');
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
-        
+
         $truncate = $this->attr('assert/truncate');
         if(is_array($truncate))
         {
