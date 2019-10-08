@@ -20,8 +20,7 @@ class Boot extends Core\Boot
                             'css'=>[
                                 'type'=>'css/%type%.css'],
                             'js'=>[
-                                'type'=>'js/%type%.js']],
-                        'wrapper'=>['#wrapper']]]],
+                                'type'=>'js/%type%.js']]]]],
             'compileScss'=>[
                 '[publicCss]/app.css'=>[
                     0=>'[scss]/app/_include.scss',
