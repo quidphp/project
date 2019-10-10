@@ -4,7 +4,7 @@ declare(strict_types=1);
 // test
 // file for booting the QuidPHP testsuite (can be deleted)
 (function() {
-    if(!empty($_SERVER['REQUEST_SCHEME']) && !empty($_SERVER['HTTP_HOST']) && !empty($_SERVER['REQUEST_URI']))
+    if(!empty($_SERVER['REQUEST_SCHEME']) && !empty($_SERVER['SERVER_NAME']) && !empty($_SERVER['REQUEST_URI']))
     {
         $config = require dirname(__DIR__).'/env.php';
         $config['path']['public'] = __DIR__;
