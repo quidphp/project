@@ -37,5 +37,5 @@ class Boot extends Core\Boot
     }
 }
 
-return array(Boot::class,'start');
+return [Boot::class,'start'];
 ?>

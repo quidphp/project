@@ -112,137 +112,137 @@ class Boot extends Core\Boot
                 'ormCatchableExceptionQuery'=>[Orm\CatchableException::class,'showQuery',true]]]
     ];
 
-    
+
     // onPrepare
     protected function onPrepare():void
     {
         $this->setAttr('request/path','/');
-        
+
         return;
     }
-    
-    
+
+
     // launch
-	public function launch()
-	{
+    public function launch()
+    {
         $return = '';
-		$this->beforeAssert();
-        
-		$target = $this->attr('assert/target');
-		$exclude = $this->attr('assert/exclude');
+        $this->beforeAssert();
+
+        $target = $this->attr('assert/target');
+        $exclude = $this->attr('assert/exclude');
         $method = $this->attr('assert/method');
         $data = ['boot'=>$this];
-        
-		if($target === true)
-		{
-			$closure = function(string $value) {
-				return (stripos($value,'quid\\test') === 0)? true:false;
-			};
-			$target = Main\Autoload::findNamespace($closure,true,true,true);
-            
-			if(!empty($exclude))
-			$target = Base\Arr::valuesStrip($exclude,$target);
-		}
-		
+
+        if($target === true)
+        {
+            $closure = function(string $value) {
+                return (stripos($value,'quid\\test') === 0)? true:false;
+            };
+            $target = Main\Autoload::findNamespace($closure,true,true,true);
+
+            if(!empty($exclude))
+            $target = Base\Arr::valuesStrip($exclude,$target);
+        }
+
         $array = Main\Autoload::callNamespace($target,$method,$exclude,$data);
-		$return .= Base\Debug::varGet($array);
-		$return .= Base\Debug::varGet(Base\Number::addition(...array_values($array)));
+        $return .= Base\Debug::varGet($array);
+        $return .= Base\Debug::varGet(Base\Number::addition(...array_values($array)));
 
-		$overview = $this->attr('assert/overview');
-		if(!empty($overview))
-		{
-			$return .= Base\Debug::varGet(Base\Server::overview());
-			
-			if($overview === true || $overview > 1)
-			{
-				$closure = function(string $value) {
-					return (stripos($value,'quid') === 0 && stripos($value,'quid\\test') !== 0)? true:false;
-				};
-				$autoload = Base\Autoload::overview($closure,true);
-				$return .= Base\Debug::varGet($autoload);
-				$lines = Base\Column::value('line',$autoload);
-				$return .= Base\Debug::varGet(Base\Number::addition(...$lines));
-				
-				if($overview === true || $overview > 2)
-				$return .= Base\Debug::varGet(Base\Autoload::all());
-			}
-		}
+        $overview = $this->attr('assert/overview');
+        if(!empty($overview))
+        {
+            $return .= Base\Debug::varGet(Base\Server::overview());
 
-		$this->afterAssert();
-        
-		return $return;
-	}
+            if($overview === true || $overview > 1)
+            {
+                $closure = function(string $value) {
+                    return (stripos($value,'quid') === 0 && stripos($value,'quid\\test') !== 0)? true:false;
+                };
+                $autoload = Base\Autoload::overview($closure,true);
+                $return .= Base\Debug::varGet($autoload);
+                $lines = Base\Column::value('line',$autoload);
+                $return .= Base\Debug::varGet(Base\Number::addition(...$lines));
 
+                if($overview === true || $overview > 2)
+                $return .= Base\Debug::varGet(Base\Autoload::all());
+            }
+        }
 
-	// beforeAssert
-	public function beforeAssert():void
-	{
-		Base\Response::ok();
-		Base\Timezone::set("America/New_York",true);
-		
-		Base\Dir::empty('[assertCommon]');
-		Base\Dir::empty('[assertCurrent]');
-		Base\Dir::empty('[assertMedia]');
-		Base\Dir::empty('[assertStorage]');
+        $this->afterAssert();
 
-		foreach (static::assertCommon64() as $basename => $value)
-		{
-			$path = '[assertCommon]/'.$basename;
-			$decode = Base\Crypt::base64Decode($value);
-			Base\File::set($path,$decode);
-		}
-
-		Base\Dir::copy('[assertMedia]','[assertCommon]');
-
-		$db = $this->attr('db');
-		if(is_array($db))
-		$this->setAttr('assert/db',$db);
-
-		$lang = $this->lang();
-		$session = $this->session();
-		$session->setUserDefault();
-
-		$fr = $this->attr('assert/langFile/fr');
-		$session->setLang('fr');
-		$lang->replace($fr);
-
-		$en = $this->attr('assert/langFile/en');
-		$session->setLang('en');
-		$lang->replace($en);
-		$array = ['relation/contextType/assert'=>'Content management system'];
-		$lang->replace($array);
-        
-		return;
-	}
+        return $return;
+    }
 
 
-	// afterAssert
-	public function afterAssert():void
-	{
-		Base\Dir::emptyAndUnlink('[assert]');
+    // beforeAssert
+    public function beforeAssert():void
+    {
+        Base\Response::ok();
+        Base\Timezone::set('America/New_York',true);
+
+        Base\Dir::empty('[assertCommon]');
+        Base\Dir::empty('[assertCurrent]');
+        Base\Dir::empty('[assertMedia]');
+        Base\Dir::empty('[assertStorage]');
+
+        foreach (static::assertCommon64() as $basename => $value)
+        {
+            $path = '[assertCommon]/'.$basename;
+            $decode = Base\Crypt::base64Decode($value);
+            Base\File::set($path,$decode);
+        }
+
+        Base\Dir::copy('[assertMedia]','[assertCommon]');
+
+        $db = $this->attr('db');
+        if(is_array($db))
+        $this->setAttr('assert/db',$db);
+
+        $lang = $this->lang();
+        $session = $this->session();
+        $session->setUserDefault();
+
+        $fr = $this->attr('assert/langFile/fr');
+        $session->setLang('fr');
+        $lang->replace($fr);
+
+        $en = $this->attr('assert/langFile/en');
+        $session->setLang('en');
+        $lang->replace($en);
+        $array = ['relation/contextType/assert'=>'Content management system'];
+        $lang->replace($array);
+
+        return;
+    }
+
+
+    // afterAssert
+    public function afterAssert():void
+    {
+        Base\Dir::emptyAndUnlink('[assert]');
         Base\Dir::emptyAndUnlink('[assertStorage]');
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
 
-		$truncate = $this->attr('assert/truncate');
-		if(is_array($truncate))
-		{
-			$db = $this->db();
-			$tables = $db->tables()->gets(...$truncate);
-			$tables->truncate();
-		}
+        $truncate = $this->attr('assert/truncate');
+        if(is_array($truncate))
+        {
+            $db = $this->db();
+            $tables = $db->tables()->gets(...$truncate);
+            $tables->truncate();
+        }
 
-		Base\Response::emptyCloseDown();
-        
-		return;
-	}
+        Base\Response::emptyCloseDown();
+
+        return;
+    }
 
 
-	// nameFromClass
-	public static function nameFromClass():string
-	{
-		return 'Assert';
-	}
+    // nameFromClass
+    public static function nameFromClass():string
+    {
+        return 'Assert';
+    }
 
 
     // assertCommon64
@@ -697,8 +697,7 @@ class OrmTable extends Core\Table
 }
 });
 }
-
 namespace Quid\Suite {
-return array(Boot::class,'start');
+return [Boot::class,'start'];
 }
 ?>
