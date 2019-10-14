@@ -1,0 +1,25 @@
+<?php 
+declare(strict_types=1);
+
+(function(?string $envType=null) {
+    if(empty($_SERVER['REQUEST_SCHEME']))
+    {
+        $config = require __DIR__.'/env.php';
+        $envType = $_SERVER['argv'][2] ?? $envType;
+        
+        if(!empty($envType) && !empty($config['schemeHost'][$envType]))
+        {
+            $schemeHost = $config['schemeHost'][$envType];
+            $config['request']['path'] = $_SERVER['argv'][1] ?? '/';
+            $config['request']['schemeHost'] = $schemeHost;
+            
+            if(!empty($config['path']['vendor']))
+            {
+                require_once $config['path']['vendor'].'/autoload.php';
+                $boot = require $config['path']['boot'];
+                $boot($config);
+            }
+        }
+    }
+})();
+?>

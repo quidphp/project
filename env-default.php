@@ -5,15 +5,19 @@ declare(strict_types=1);
 return [
     'schemeHost'=>[
         'dev/app'=>'http://project.test',
-        'prod/app'=>'https://project.com'
+        'prod/app'=>'https://project.com',
+        'dev/assert'=>'http://assert-project.test',
+        'prod/assert'=>'https://assert-project.com',
     ],
 
     'path'=>[
+        'public'=>__DIR__.'/public',
         'src'=>__DIR__.'/src',
         'js'=>__DIR__.'/js',
         'scss'=>__DIR__.'/scss',
         'storage'=>__DIR__.'/storage',
-        'vendor'=>__DIR__.'/vendor'
+        'vendor'=>__DIR__.'/vendor',
+        'boot'=>__DIR__.'/src/Boot.php'
     ],
 
     '@dev'=>[
