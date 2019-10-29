@@ -26,7 +26,7 @@ class Boot extends Core\Boot
             'overview'=>1,
             'db'=>null,
             'exclude'=>[Test\Lemur::class,Test\Site::class],
-            'fileSession'=>Core\File\Session::class,
+            'fileSession'=>Main\File\Session::class,
             'lang'=>['fr'=>Core\Lang\Fr::class,'en'=>Core\Lang\En::class],
             'langFile'=>['fr'=>'[assertCommon]/fr.php','en'=>'[assertCommon]/en.php'],
             'truncate'=>['log','logCron','logEmail','logError','logHttp','logSql','queueEmail']],
