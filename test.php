@@ -128,9 +128,9 @@ class Boot extends Core\Boot
         $return = '';
         $this->beforeAssert();
 
-        $target = $this->attr('assert/target');
-        $exclude = $this->attr('assert/exclude');
-        $method = $this->attr('assert/method');
+        $target = $this->getAttr('assert/target');
+        $exclude = $this->getAttr('assert/exclude');
+        $method = $this->getAttr('assert/method');
         $data = ['boot'=>$this];
 
         if($target === true)
@@ -148,7 +148,7 @@ class Boot extends Core\Boot
         $return .= Base\Debug::varGet($array);
         $return .= Base\Debug::varGet(Base\Number::addition(...array_values($array)));
 
-        $overview = $this->attr('assert/overview');
+        $overview = $this->getAttr('assert/overview');
         if(!empty($overview))
         {
             $return .= Base\Debug::varGet(Base\Server::overview());
@@ -194,7 +194,7 @@ class Boot extends Core\Boot
 
         Base\Dir::copy('[assertMedia]','[assertCommon]');
 
-        $db = $this->attr('db');
+        $db = $this->getAttr('db');
         if(is_array($db))
         $this->setAttr('assert/db',$db);
 
@@ -202,11 +202,11 @@ class Boot extends Core\Boot
         $session = $this->session();
         $session->setUserDefault();
 
-        $fr = $this->attr('assert/langFile/fr');
+        $fr = $this->getAttr('assert/langFile/fr');
         $session->setLang('fr');
         $lang->replace($fr);
 
-        $en = $this->attr('assert/langFile/en');
+        $en = $this->getAttr('assert/langFile/en');
         $session->setLang('en');
         $lang->replace($en);
         $array = ['relation/contextType/assert'=>'Content management system'];
@@ -224,7 +224,7 @@ class Boot extends Core\Boot
         Base\Dir::emptyAndUnlink('[storageLog]');
         Base\Dir::emptyAndUnlink('[storage]/session');
 
-        $truncate = $this->attr('assert/truncate');
+        $truncate = $this->getAttr('assert/truncate');
         if(is_array($truncate))
         {
             $db = $this->db();
@@ -308,7 +308,7 @@ class ActivatePassword extends Core\Route\ActivatePassword
 });
 }
 namespace Quid\Suite\Assert {
-use Quid\Suite;
+use Quid\Test\Suite;
 use Quid\Core;
 
 \Quid\Main\Autoload::setClosure("Quid\Suite\Assert",'Contact',function() {
@@ -495,7 +495,7 @@ class User extends Core\Role\User
 
 /* ROW */
 namespace Quid\Suite\Row {
-use Quid\Suite;
+use Quid\Test\Suite;
 use Quid\Core;
 
 \Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmCell',function() {
@@ -525,7 +525,7 @@ class OrmCell extends Core\Row
 });
 }
 namespace Quid\Suite\Row {
-use Quid\Suite;
+use Quid\Test\Suite;
 use Quid\Core;
 use Quid\Orm;
 
@@ -565,7 +565,7 @@ class OrmCol extends Core\Row
 });
 }
 namespace Quid\Suite\Row {
-use Quid\Suite;
+use Quid\Test\Suite;
 use Quid\Core;
 
 \Quid\Main\Autoload::setClosure("Quid\Suite\Row",'OrmRow',function() {
@@ -607,7 +607,7 @@ class OrmTableSibling extends Core\Row
 });
 }
 namespace Quid\Suite\Row {
-use Quid\Suite;
+use Quid\Test\Suite;
 use Quid\Core;
 
 \Quid\Main\Autoload::setClosure("Quid\Suite\Row",'User',function() {
