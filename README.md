@@ -20,7 +20,7 @@ This repository contains a sample project built on top of the QuidPHP framework.
 $ composer create-project quidphp/project --prefer-dist
 ```
 
-Once this is complete, simply follow these steps:
+Once this is complete, follow these steps:
 1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
 2. Configure an Apache Virtual Host or Nginx Server Block in order to have a domain pointing to the [public](public) folder document root.
 3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
