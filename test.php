@@ -114,7 +114,7 @@ class Boot extends Core\Boot
 
 
     // onPrepare
-    protected function onPrepare():void
+    final protected function onPrepare():void
     {
         $this->setAttr('request/path','/');
 
@@ -123,7 +123,7 @@ class Boot extends Core\Boot
 
 
     // launch
-    public function launch()
+    final public function launch()
     {
         $return = '';
         $this->beforeAssert();
@@ -175,7 +175,7 @@ class Boot extends Core\Boot
 
 
     // beforeAssert
-    public function beforeAssert():void
+    final public function beforeAssert():void
     {
         Base\Response::ok();
         Base\Timezone::set('America/New_York',true);
@@ -217,7 +217,7 @@ class Boot extends Core\Boot
 
 
     // afterAssert
-    public function afterAssert():void
+    final public function afterAssert():void
     {
         Base\Dir::emptyAndUnlink('[assert]');
         Base\Dir::emptyAndUnlink('[assertStorage]');
@@ -239,14 +239,14 @@ class Boot extends Core\Boot
 
 
     // nameFromClass
-    public static function nameFromClass():string
+    final public static function nameFromClass():string
     {
         return 'Assert';
     }
 
 
     // assertCommon64
-    protected static function assertCommon64():array
+    final protected static function assertCommon64():array
     {
         return [
             'class.php' => 'PD9waHAKZGVjbGFyZShzdHJpY3RfdHlwZXM9MSk7Cm5hbWVzcGFjZSBRdWlkXEJhc2VcVGVzdDsKdXNlIFF1aWRcQmFzZTsKCi8vIGZpbGUKY2xhc3MgRmlsZSBleHRlbmRzIEJhc2VcVGVzdAp7CgkvLyB0cmlnZ2VyCglwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIHRyaWdnZXIoYXJyYXkgJGRhdGEpOmJvb2wKCXsKCQkvLyBwcmVwYXJlCgkJJG1lZGlhSnBnID0gIltwdWJsaWNdL21lZGlhL2pwZy5qcGciOwoJCSRtZWRpYVZlY3RvciA9ICJbcHVibGljXS9tZWRpYS9zdmcuc3ZnIjsKCQkkbWVkaWFDc3YgPSAiW3B1YmxpY10iLiIvbWVkaWEvY3N2LmNzdiI7CgkJJHByaXZhdGVQYXRoID0gQmFzZVxGaW5kZXI6OnNob3J0Y3V0KCdbcHJpdmF0ZV0nKTsKCQkkc3RvcmFnZVBhdGggPSBCYXNlXEZpbmRlcjo6c2hvcnRjdXQoJ1tzdG9yYWdlXScpOwoJCSRzdG9yYWdlID0gIlthc3NlcnRDdXJyZW50XSI7CgkJJGNvbW1vbiA9ICJbYXNzZXJ0Q29tbW9uXSI7CgkJJGN1cnJlbnRGaWxlID0gQmFzZVxGaW5kZXI6OnBhdGgoIlthc3NlcnRDb21tb25dL2NsYXNzLnBocCIpOwoJCWFzc2VydChCYXNlXERpcjo6cmVzZXQoJHN0b3JhZ2UpKTsKCQkkdG1wID0gdG1wZmlsZSgpOwoJCSRfZmlsZV8gPSBCYXNlXEZpbmRlcjo6c2hvcnRjdXQoIlthc3NlcnRDb21tb25dL2NsYXNzLnBocCIpOwoJCSRfZGlyXyA9IGRpcm5hbWUoJF9maWxlXyk7CgkJJHRlbXAgPSBCYXNlXEZpbGU6OnByZWZpeCgiW2Fzc2VydEN1cnJlbnRdIik7CgkJJG9wZW4gPSBCYXNlXFJlczo6b3BlbigkY3VycmVudEZpbGUpOwoJCSRkaXIgPSBCYXNlXFJlczo6b3BlbigkX2Rpcl8pOwoJCSRzeW0gPSBCYXNlXFN5bWxpbms6OnNldCgkY3VycmVudEZpbGUsIlthc3NlcnRDdXJyZW50XS9zeW0iKTsKCQkkd3JpdGUgPSAiW2Fzc2VydEN1cnJlbnRdL3NwbGljZS50eHQiOwoJCSRzdG9yYWdlID0gIlthc3NlcnRDdXJyZW50XSI7CgkJJGFycmF5ID0gQmFzZVxGaWxlOjptYWtlVXBsb2FkQXJyYXkoJGN1cnJlbnRGaWxlKTsKCQkKCQkvLyBpcwoJCWFzc2VydChCYXNlXEZpbGU6OmlzKCRjdXJyZW50RmlsZSkpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzKCR0ZW1wKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXMoJHRtcCkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppcygiW2Fzc2VydEN1cnJlbnRdIikpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzKCRhcnJheSkpOwoKCQkvLyBpc1JlYWRhYmxlCgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNSZWFkYWJsZSgkY3VycmVudEZpbGUpKTsKCQlhc3NlcnQoQmFzZVxGaWxlOjppc1JlYWRhYmxlKCRjdXJyZW50RmlsZSkpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzUmVhZGFibGUoJG9wZW4pKTsKCQlhc3NlcnQoQmFzZVxGaWxlOjppc1JlYWRhYmxlKCR0bXApKTsKCQlhc3NlcnQoQmFzZVxGaWxlOjppc1JlYWRhYmxlKCRhcnJheSkpOwoKCQkvLyBpc1dyaXRhYmxlCgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNXcml0YWJsZSgkdGVtcCkpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzV3JpdGFibGUoJHRtcCkpOwoKCQkvLyBpc0V4ZWN1dGFibGUKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNFeGVjdXRhYmxlKCR0ZW1wKSk7CgoJCS8vIGlzRW1wdHkKCQkkZW1wdHkgPSAiJHN0b3JhZ2UvZW1wdHkucGhwIjsKCQlhc3NlcnQoQmFzZVxGaWxlOjpzZXQoJGVtcHR5LCIiKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNFbXB0eSgkdGVtcCkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc0VtcHR5KCRjdXJyZW50RmlsZSkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc0VtcHR5KCRvcGVuKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNFbXB0eSgkdG1wKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNFbXB0eSgkZW1wdHkpKTsKCgkJLy8gaXNOb3RFbXB0eQoJCWFzc2VydCghQmFzZVxGaWxlOjppc05vdEVtcHR5KCR0ZW1wKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNOb3RFbXB0eSgkY3VycmVudEZpbGUpKTsKCQlhc3NlcnQoQmFzZVxGaWxlOjppc05vdEVtcHR5KCRvcGVuKSk7CgkJYXNzZXJ0KCFCYXNlXEZpbGU6OmlzTm90RW1wdHkoJHRtcCkpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzTm90RW1wdHkoJGFycmF5KSk7CgoJCS8vIGlzVXBsb2FkZWQKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNVcGxvYWRlZCgkdGVtcCkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc1VwbG9hZGVkKCRjdXJyZW50RmlsZSkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc1VwbG9hZGVkKCR0bXApKTsKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNVcGxvYWRlZCgkYXJyYXkpKTsKCgkJLy8gaXNVcGxvYWRBcnJheQoJCWFzc2VydChCYXNlXEZpbGU6OmlzVXBsb2FkQXJyYXkoYXJyYXkoJ25hbWUnPT4nJywndHlwZSc9PicnLCd0bXBfbmFtZSc9PicnLCdlcnJvcic9PjEsJ3NpemUnPT4wKSxhcnJheSgnbmFtZSc9PicnLCd0eXBlJz0+JycsJ3RtcF9uYW1lJz0+JycsJ2Vycm9yJz0+MSwnc2l6ZSc9PjApKSk7CgkJYXNzZXJ0KCFCYXNlXEZpbGU6OmlzVXBsb2FkQXJyYXkoYXJyYXkoJ25hbWV6Jz0+JycsJ3R5cGUnPT4nJywndG1wX25hbWUnPT4nJywnZXJyb3InPT4xLCdzaXplJz0+MCkpKTsKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNVcGxvYWRBcnJheShhcnJheSgnbmFtZSc9PicnLCd0eXBlJz0+JycsJ3RtcF9uYW1lJz0+JycsJ2Vycm9yJz0+MSwnc2l6ZSc9PjApLGFycmF5KCduYW16ZSc9PicnLCd0eXBlJz0+JycsJ3RtcF9uYW1lJz0+JycsJ2Vycm9yJz0+MSwnc2l6ZSc9PjApKSk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNVcGxvYWRBcnJheSgkYXJyYXkpKTsKCgkJLy8gaXNVcGxvYWRFbXB0eU5vdEVtcHR5CgoJCS8vIGlzVXBsb2FkRW1wdHkKCQkkZmlsZSA9IGFycmF5KCduYW1lJz0+JycsJ3R5cGUnPT4nJywndG1wX25hbWUnPT4nJywnZXJyb3InPT40LCdzaXplJz0+MCk7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNVcGxvYWRFbXB0eSgkZmlsZSkpOwoKCQkvLyBpc1VwbG9hZE5vdEVtcHR5CgkJJGZpbGUgPSBhcnJheSgnbmFtZSc9PicnLCd0eXBlJz0+JycsJ3RtcF9uYW1lJz0+JycsJ2Vycm9yJz0+NCwnc2l6ZSc9PjApOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc1VwbG9hZE5vdEVtcHR5KCRmaWxlKSk7CgkJJGZpbGUgPSBhcnJheSgnbmFtZSc9PicnLCd0eXBlJz0+JycsJ3RtcF9uYW1lJz0+JycsJ2Vycm9yJz0+Miwnc2l6ZSc9PjIpOwoJCWFzc2VydChCYXNlXEZpbGU6OmlzVXBsb2FkTm90RW1wdHkoJGZpbGUpKTsKCgkJLy8gaXNVcGxvYWRUb29CaWcKCQkkZmlsZSA9IGFycmF5KCduYW1lJz0+JycsJ3R5cGUnPT4nJywndG1wX25hbWUnPT4nJywnZXJyb3InPT4yLCdzaXplJz0+Mik7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNVcGxvYWRUb29CaWcoJGZpbGUpKTsKCQkkZmlsZSA9IGFycmF5KCduYW1lJz0+JycsJ3R5cGUnPT4nJywndG1wX25hbWUnPT4nJywnZXJyb3InPT4xLCdzaXplJz0+Mik7CgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNVcGxvYWRUb29CaWcoJGZpbGUpKTsKCQkkZmlsZSA9IGFycmF5KCduYW1lJz0+JycsJ3R5cGUnPT4nJywndG1wX25hbWUnPT4nJywnZXJyb3InPT4zLCdzaXplJz0+Mik7CgkJYXNzZXJ0KCFCYXNlXEZpbGU6OmlzVXBsb2FkVG9vQmlnKCRmaWxlKSk7CgoJCS8vIGlzTG9hZGVkCgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNMb2FkZWQoX19GSUxFX18pKTsKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNMb2FkZWQoJHRtcCkpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc0xvYWRlZCgkdGVtcCkpOwoKCQkvLyBpc1Jlc291cmNlCgkJYXNzZXJ0KEJhc2VcRmlsZTo6aXNSZXNvdXJjZSgkb3BlbikpOwoJCWFzc2VydCghQmFzZVxGaWxlOjppc1Jlc291cmNlKCRjdXJyZW50RmlsZSkpOwoKCQkvLyBpc01pbWVHcm91cAoJCWFzc2VydChCYXNlXEZpbGU6OmlzTWltZUdyb3VwKCd0ZXh0JywkY3VycmVudEZpbGUpKTsKCQlhc3NlcnQoIUJhc2VcRmlsZTo6aXNNaW1lR3JvdXAoJ3RleHQnLCR0bXApKTsKCQlhc3NlcnQoQmFzZVxGaWxlOjppc01pbWVHcm91cCgndGV4dCcsJGFycmF5KSk7CgkJCgkJcmV0dXJuIHRydWU7Cgl9Cn0KPz4=',
@@ -300,7 +300,7 @@ class ActivatePassword extends Core\Route\ActivatePassword
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         return static::class;
     }
@@ -324,7 +324,7 @@ class Contact extends Core\Route
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         return static::class;
     }
@@ -344,7 +344,7 @@ class Error extends Core\Route\Error
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         return static::class;
     }
@@ -364,7 +364,7 @@ class Home extends Core\Route\Home
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         return static::class;
     }
@@ -384,7 +384,7 @@ class Sitemap extends Core\Route\Sitemap
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         return static::class;
     }
@@ -410,7 +410,7 @@ class System extends Core\Route
 
 
     // trigger
-    public function trigger():string
+    final public function trigger():string
     {
         return '';
     }
@@ -438,7 +438,7 @@ class OrmCell__Name extends Core\Col
 
 
     // onSet
-    public function onSet($return,array $row,?Orm\Cell $cell=null,array $option)
+    final public function onSet($return,array $row,?Orm\Cell $cell=null,array $option)
     {
         if(is_string($return))
         $return = Base\Str::stripEnd('abcde',$return);
@@ -448,7 +448,7 @@ class OrmCell__Name extends Core\Col
 
 
     // onGet
-    public function onGet($return,array $option)
+    final public function onGet($return,array $option)
     {
         $return = $this->value($return);
 
@@ -557,7 +557,7 @@ class OrmCol extends Core\Row
 
 
     // testCall
-    public static function testCall(Orm\ColRelation $relation):array
+    final public static function testCall(Orm\ColRelation $relation):array
     {
         return ['test','test2','test3'];
     }
@@ -599,7 +599,7 @@ class OrmTableSibling extends Core\Row
 
 
     // myMethod
-    public function myMethod()
+    final public function myMethod()
     {
         return $this->cellName();
     }
@@ -624,7 +624,7 @@ class User extends Core\Row\User
 
 
     // activatePasswordRoute
-    public function activatePasswordRoute():string
+    final public function activatePasswordRoute():string
     {
         return Suite\Assert\ActivatePassword::class;
     }
@@ -674,7 +674,7 @@ class OrmDb extends Core\Table
 
 
     // default
-    public function default():?array
+    final public function default():?array
     {
         return ['what'=>['id'],'where'=>['id'=>2]];
     }

@@ -13,7 +13,7 @@ class Home extends Core\Route\Home
 
 
     // trigger
-    public function trigger()
+    final public function trigger()
     {
         $r = $this->docOpen();
         $r .= Html::h1('Hello World');

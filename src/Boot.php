@@ -31,7 +31,7 @@ class Boot extends Core\Boot
 
 
     // onReady
-    protected function onReady():Core\Boot
+    final protected function onReady():Core\Boot
     {
         return $this;
     }
