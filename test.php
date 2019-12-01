@@ -146,7 +146,7 @@ class Boot extends Core\Boot
 
         $array = Main\Autoload::callNamespace($target,$method,$exclude,$data);
         $return .= Base\Debug::varGet($array);
-        $return .= Base\Debug::varGet(Base\Number::addition(...array_values($array)));
+        $return .= Base\Debug::varGet(Base\Num::addition(...array_values($array)));
 
         $overview = $this->getAttr('assert/overview');
         if(!empty($overview))
@@ -161,7 +161,7 @@ class Boot extends Core\Boot
                 $autoload = Base\Autoload::overview($closure,true);
                 $return .= Base\Debug::varGet($autoload);
                 $lines = Base\Column::value('line',$autoload);
-                $return .= Base\Debug::varGet(Base\Number::addition(...$lines));
+                $return .= Base\Debug::varGet(Base\Num::addition(...$lines));
 
                 if($overview === true || $overview > 2)
                 $return .= Base\Debug::varGet(Base\Autoload::all());
@@ -669,7 +669,7 @@ class OrmDb extends Core\Table
         'label'=>'Le nom de la table',
         'description'=>'ok/Description table',
         '@assert'=>[
-            'where'=>[['date','>=',[Base\Date::class,'getTimestamp']]]]
+            'where'=>[['date','>=',[Base\Datetime::class,'getTimestamp']]]]
     ];
 
 
