@@ -669,7 +669,7 @@ class OrmDb extends Core\Table
         'label'=>'Le nom de la table',
         'description'=>'ok/Description table',
         '@assert'=>[
-            'where'=>[['date','>=',[Base\Datetime::class,'getTimestamp']]]]
+            'where'=>[['date','>=',[Base\Datetime::class,'now']]]]
     ];
 
 
