@@ -3,15 +3,15 @@ declare(strict_types=1);
 // declare environment data for the application, copy this file and rename to env.php
 
 return [
-    'cliEnvType'=>'dev/app',
+    'cliEnvType'=>'dev/cms',
 
     'schemeHost'=>[
         'dev/app'=>'http://project.test',
         'prod/app'=>'https://project.com',
         'dev/cms'=>'http://cms.project.test',
         'prod/cms'=>'https://cms.project.com',
-        'dev/assert'=>'http://assert-project.test',
-        'prod/assert'=>'https://assert-project.com',
+        'dev/assert'=>'http://assert.project.test',
+        'prod/assert'=>'https://assert.project.com',
     ],
 
     'path'=>[
@@ -31,6 +31,9 @@ return [
         'db'=>['mysql:host=localhost;port=3306;dbname=project','','']],
 
     '@assert'=>[
-        'db'=>['mysql:host=localhost;port=3306;dbname=projectTest','root','']]
+        'db'=>['mysql:host=localhost;port=3306;dbname=projectTest','root',''],
+        'path'=>[
+            'boot'=>'[vendor]/quidphp/lemur/test/Suite/BootLemur.php'
+        ]]
 ];
 ?>
