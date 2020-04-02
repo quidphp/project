@@ -1,40 +1,18 @@
 <?php
 declare(strict_types=1);
 namespace Project;
-use Quid\Core;
+use Quid\Lemur;
 
 // boot
 // class for booting the application
-class Boot extends Core\Boot
+class Boot extends Lemur\Boot
 {
     // config
     public static $config = [
-        'types'=>['app'],
+        'types'=>['app','cms'],
         'version'=>['app'=>'1.0'],
-        'lang'=>['en'],
-        '@app'=>[
-            'config'=>[
-                Core\Route::class=>[
-                    'docOpen'=>[
-                        'head'=>[
-                            'css'=>[
-                                'type'=>'css/%type%.css'],
-                            'js'=>[
-                                'type'=>'js/%type%.js']]]]],
-            'compileScss'=>[
-                '[publicCss]/app.css'=>[
-                    0=>'[scss]/app/_include.scss',
-                    10=>'[scss]/app/app.scss']],
-            'concatenateJs'=>[
-                '[publicJs]/app.js'=>'[js]/app']]
+        'lang'=>['en']
     ];
-
-
-    // onReady
-    final protected function onReady():Core\Boot
-    {
-        return $this;
-    }
 }
 
 return [Boot::class,'start'];

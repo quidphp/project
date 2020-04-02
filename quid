@@ -1,25 +1,34 @@
-<?php 
+<?php
 declare(strict_types=1);
 
-(function(?string $envType=null) {
-    if(empty($_SERVER['REQUEST_SCHEME']))
+(function(?array $argv):void {
+
+    if(!empty($argv))
     {
         $config = require __DIR__.'/env.php';
-        $envType = $_SERVER['argv'][2] ?? $envType;
-        
-        if(!empty($envType) && !empty($config['schemeHost'][$envType]))
-        {
-            $schemeHost = $config['schemeHost'][$envType];
-            $config['request']['path'] = $_SERVER['argv'][1] ?? '/';
-            $config['request']['schemeHost'] = $schemeHost;
-            
-            if(!empty($config['path']['vendor']))
-            {
-                require_once $config['path']['vendor'].'/autoload.php';
-                $boot = require $config['path']['boot'];
-                $boot($config);
-            }
-        }
+        $arg = explode(':',$argv[1] ?? '/');
+        $envType = $arg[1] ?? $config['cliEnvType'] ?? null;
     }
-})();
+
+    if(!empty($envType))
+    $env = explode('/',$envType)[0] ?? null;
+
+    if(!empty($env) && !empty($config['schemeHost'][$envType]))
+    {
+        $vendor = $config['@'.$env]['path']['vendor'] ?? $config['path']['vendor'] ?? null;
+        $boot = $config['@'.$env]['path']['boot'] ?? $config['path']['boot'] ?? null;
+    }
+
+    if(!empty($vendor) && !empty($boot))
+    {
+        require_once $vendor.'/autoload.php';
+        $config['request']['path'] = $arg[0];
+        $config['request']['schemeHost'] = $config['schemeHost'][$envType];
+        $config['request']['argv'] = $argv;
+        (require $boot)($config);
+    }
+
+    return;
+
+})($_SERVER['argv']);
 ?>

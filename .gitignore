@@ -1,7 +1,9 @@
 .DS_Store
 ._*,
 Thumbs.db
+/composer.lock
 /vendor/*
+/storage/*
 /public/*
 /env.php
 !/public/index.php

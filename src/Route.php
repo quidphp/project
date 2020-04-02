@@ -3,9 +3,9 @@ declare(strict_types=1);
 namespace Project;
 use Quid\Lemur;
 
-// session
-// class for managing the session
-class Session extends Lemur\Session
+// route
+// abstract class for a route, all routes will extend this class
+abstract class Route extends Lemur\Route
 {
     // config
     public static $config = [];

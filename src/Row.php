@@ -3,9 +3,9 @@ declare(strict_types=1);
 namespace Project;
 use Quid\Lemur;
 
-// session
-// class for managing the session
-class Session extends Lemur\Session
+// row
+// abstract class for a row, all rows will extend this class
+abstract class Row extends Lemur\Row
 {
     // config
     public static $config = [];

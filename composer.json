@@ -1,8 +1,8 @@
 {
     "name": "quidphp/project",
     "type": "project",
-    "description": "Create a new project using QuidPHP",
-    "keywords": ["quidphp","quid","framework"],
+    "description": "Create a new project using QuidPHP and LemurCMS",
+    "keywords": ["quidphp","quid","lemur","lemur cms","framework","cms"],
     "homepage": "https://quidphp.com",
     "license": "MIT",
     "authors": [{
@@ -16,6 +16,8 @@
         "quidphp/orm": "dev-master",
         "quidphp/routing": "dev-master",
         "quidphp/core": "dev-master",
+        "quidphp/front": "dev-master",
+        "quidphp/lemur": "dev-master",
         "verot/class.upload.php": "^2.0",
         "phpmailer/phpmailer": "^6.0",
         "tedivm/jshrink": "^1.3",
