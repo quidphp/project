@@ -5,7 +5,7 @@ use Quid\Core;
 use Quid\Lemur;
 
 // boot
-// class for booting the application
+// class for booting the application and CMS
 class Boot extends Lemur\Boot
 {
     // config

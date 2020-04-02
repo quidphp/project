@@ -1,4 +1,4 @@
 "use strict";
 
 // app
-// main javaScript file for the app
+// main JavaScript file for the app

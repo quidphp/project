@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+// index file for booting the application and Cms via an HTTP request
 
 (function(?string $scheme,?string $host,?string $uri):void {
     http_response_code(500);
