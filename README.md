@@ -28,7 +28,20 @@ Once this is complete, simply follow these steps:
 5. Update the scheme hosts within the **env.php** file. You will need to set a different host (domain or subdomain) for the application and the CMS.
 6. Update the database parameters within the **env.php** file.
 7. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project.
-8. From your web browser, enter the URL to the [public/index.php](public/index.php) entry file.
+
+## Booting
+There are two ways to boot the application or CMS.
+
+### HTTP
+From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is used.
+
+### CLI
+Open the project folder in the application. The entry should be in the following format: **php quid [path][:envType]**. If the *envType* is not specified, the system will use the *cliEnvType* value within the **env.php** file. Exemple:
+``` bash
+$ php quid /fr/my-url
+$ php quid /:dev/cms
+$ php quid /:dev/assert
+```
 
 ## Requirement
 **QuidPHP/Project** requires the following:
