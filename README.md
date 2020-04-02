@@ -20,34 +20,6 @@ This repository contains a sample application project built on top of the QuidPH
 $ composer create-project quidphp/project --prefer-dist
 ```
 
-Once this is complete, simply follow these steps:
-1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
-2. Configure an Apache Virtual Host or Nginx Server Block in order to have a domain pointing to the [public](public) folder document root.
-3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
-4. Duplicate the [env-default.php](env-default.php) file and rename it to **env.php**.
-5. Update the scheme hosts within the **env.php** file. You will need to set a different host (domain or subdomain) for the application and the CMS.
-6. Update the database parameters within the **env.php** file.
-7. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project.
-
-## Booting
-There are two ways to boot the application or CMS.
-
-### HTTP
-From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is booted.
-
-### CLI
-Open the project folder in the Command Line. Then submit a command that should be in the following format: **php quid [path][:envType]**.
-
-The *envType* determines if the application or CMS needs to be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
-``` bash
-$ php quid /en/my-url
-$ php quid /en/my-url:dev/cms
-$ php quid /:dev/assert
-```
-
-## CMS
-Once you open the CMS within your browser, you will need to login. The default username is **admin** and the initial password is **changeme123**. Once you are logged in, you will be able to change the password for the user and create new users.
-
 ## Requirement
 **QuidPHP/Project** requires the following:
 - PHP 7.3+ with these extensions:
@@ -91,6 +63,37 @@ Once you open the CMS within your browser, you will need to login. The default u
 - [scssphp/scssphp](https://github.com/scssphp/scssphp) - ScssPhp\ScssPhp - SCSS compiler written in PHP
 
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
+
+## Setup
+Once the installation is complete, simply follow these steps:
+1. Make sure the [storage](storage) and [public](public) folders are writable by your web server. For [storage](storage) also make sure all subdirectories are writable.
+2. Configure an Apache Virtual Host or Nginx Server Block in order to have a domain pointing to the [public](public) folder document root.
+3. Import [sql/project.sql.zip](sql/project.sql.zip) within a new Mysql/MariaDB database.
+4. Duplicate the [env-default.php](env-default.php) file and rename it to **env.php**.
+5. Update the scheme hosts within the **env.php** file. You will need to set a different host (domain or subdomain) for the application and the CMS.
+6. Update the database parameters within the **env.php** file.
+7. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project.
+
+## Booting
+There are two ways to boot the application or CMS.
+
+### HTTP
+From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is booted.
+
+### CLI
+Open the project folder in the Command Line. Then submit a command that should be in the following format: **php quid [path][:envType]**.
+
+The *envType* determines if the application or CMS needs to be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
+``` bash
+$ php quid /en/my-url
+$ php quid /en/my-url:dev/cms
+$ php quid /:dev/assert
+```
+
+## Credentials
+Once you open the CMS within your browser, you will need to login. The default username is **admin** and the initial password is **changeme123**. 
+
+Once you are logged in, you will be able to change the password for the user and create new users.
 
 ## Overview
 **QuidPHP/Project** contains 24 files. Here is an overview:
