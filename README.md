@@ -91,7 +91,9 @@ $ php quid /:dev/assert
 ```
 
 ## Credentials
-Once you open the CMS within your browser, you will need to login. The default username is **admin** and the initial password is **changeme123**. 
+Once you open the CMS within your browser, you will need to login. The default user:
+- Username: **admin** 
+- Password: **changeme123**
 
 Once you are logged in, you will be able to change the password for the user and create new users.
 
