@@ -102,7 +102,9 @@ Once you are logged in, you will be able to change the password for the user and
 1. Import [sql/test.sql.zip](sql/test.sql.zip) within a new Mysql/MariaDB database.
 2. Update the database parameters within the **env.php** file (look at @assert).
 3. Update the scheme hosts within the **env.php** file (dev/assert or prod/assert).
-4. From your web browser, enter the URL to the [public/test.php](public/test.php) entry file.
+4. To boot the test suite:
+    - From your web browser, enter the URL to the [public/test.php](public/test.php) entry file (using the host for @assert)
+    - From your Command Line, write **php quid /:dev/assert**  or **php quid /:prod/assert**
 
 ### Known issues
 - On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
