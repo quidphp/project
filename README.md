@@ -97,6 +97,17 @@ Once you open the CMS within your browser, you will need to login. The default u
 
 Once you are logged in, you will be able to change the password for the user and create new users.
 
+## Test suite
+**QuidPHP/Project** test suite contains about 15000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
+1. Import [sql/test.sql.zip](sql/test.sql.zip) within a new Mysql/MariaDB database.
+2. Update the database parameters within the **env.php** file (look at @assert).
+3. Update the scheme hosts within the **env.php** file (dev/assert or prod/assert).
+4. From your web browser, enter the URL to the [public/test.php](public/test.php) entry file.
+
+### Known issues
+- On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
+- On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.
+
 ## Overview
 **QuidPHP/Project** contains 24 files. Here is an overview:
 - [.gitignore](.gitignore) - Standard .gitignore file for the project
@@ -123,14 +134,3 @@ Once you are logged in, you will be able to change the password for the user and
 - [src/App/Sitemap.php](src/App/Sitemap.php) - Class for the automated sitemap.xml route of the app
 - [src/Row/User.php](src/Row/User.php) - Class for a row of the user table
 - [storage/public/favicon.ico](storage/public/media/lemur.jpg) - Generic favicon (16x16), this will be symlinked to *public/favicon.ico*.
-
-## Test suite
-**QuidPHP/Project** test suite contains about 15000 assertions which can thoroughly test your setup. In order to run the test suite, follow the Installation steps and then do the following:
-1. Import [sql/test.sql.zip](sql/test.sql.zip) within a new Mysql/MariaDB database.
-2. Update the database parameters within the **env.php** file (look at @assert).
-3. Update the scheme hosts within the **env.php** file (dev/assert or prod/assert).
-4. From your web browser, enter the URL to the [public/test.php](public/test.php) entry file.
-
-### Known issues
-- On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
-- On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.
