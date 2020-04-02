@@ -38,10 +38,10 @@ From your web browser, enter the URL to the [public/index.php](public/index.php)
 ### CLI
 Open the project folder in the Command Line. Then submit a command that should be in the following format: **php quid [path][:envType]**.
 
-The *envType* determines if the application or CMS should be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
+The *envType* determines if the application or CMS needs to be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
 ``` bash
-$ php quid /fr/my-url
-$ php quid /:dev/cms
+$ php quid /en/my-url
+$ php quid /en/my-url:dev/cms
 $ php quid /:dev/assert
 ```
 
