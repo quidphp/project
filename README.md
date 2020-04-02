@@ -45,6 +45,9 @@ $ php quid /en/my-url:dev/cms
 $ php quid /:dev/assert
 ```
 
+## CMS
+Once you open the CMS within your browser, you will need to login. The default username is **admin** and the initial password is **changeme123**. Once you are logged in, you will be able to change the password for the user and create new users.
+
 ## Requirement
 **QuidPHP/Project** requires the following:
 - PHP 7.3+ with these extensions:
