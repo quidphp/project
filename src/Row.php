@@ -8,6 +8,12 @@ use Quid\Lemur;
 abstract class Row extends Lemur\Row
 {
     // config
-    public static $config = [];
+    public static $config = [
+        '@app'=>[
+            'where'=>true,
+            'search'=>false,
+            'route'=>[
+                'cms'=>Lemur\Cms\Specific::class]]
+    ];
 }
 ?>
