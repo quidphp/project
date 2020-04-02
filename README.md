@@ -33,10 +33,12 @@ Once this is complete, simply follow these steps:
 There are two ways to boot the application or CMS.
 
 ### HTTP
-From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is used.
+From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is booted.
 
 ### CLI
-Open the project folder in the application. The entry should be in the following format: **php quid [path][:envType]**. If the *envType* is not specified, the system will use the *cliEnvType* value within the **env.php** file. Exemple:
+Open the project folder in the Command Line. Then submit a command that should be in the following format: **php quid [path][:envType]**.
+
+The *envType* determines if the application or CMS should be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
 ``` bash
 $ php quid /fr/my-url
 $ php quid /:dev/cms
