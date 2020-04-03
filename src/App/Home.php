@@ -16,7 +16,8 @@ class Home extends Core\Route\Home
     final public function trigger()
     {
         $r = $this->docOpen();
-        $r .= Html::h1('Hello World');
+        $html = Html::h1('Hello World');
+        $r .= Html::div($html,'route-wrap');
         $r .= $this->docClose();
 
         return $r;

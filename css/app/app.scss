@@ -1,6 +1,12 @@
 // app
 // main scss stylesheet for the app
 
-body {
-	
+// init
+@include defaultClasses();
+@include defaultAnimation();
+@include Document('.route-wrap', $gray);
+
+// component
+body form {
+    @include Form();
 }
