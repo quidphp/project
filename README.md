@@ -34,7 +34,6 @@ $ composer create-project quidphp/project --prefer-dist
     - openssl
     - session
     - SimpleXML
-    - Zend OPcache
     - zip
     - PDO
     - pdo_mysql
@@ -42,7 +41,6 @@ $ composer create-project quidphp/project --prefer-dist
     - *post_max_size* must be at least 1MB
     - *post_max_size* must be larger than *upload_max_filesize*
     - *memory_limit* must be at least 128MB
-    - *browscap* needs to contain a valid path 
 - Mysql or MariaDB database
 - Apache or Nginx server
 - Compatible with MacOs, Windows and Linux
