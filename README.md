@@ -20,6 +20,11 @@ This repository contains a sample application project built on top of the QuidPH
 $ composer create-project quidphp/project --prefer-dist
 ```
 
+To install the latest build (unstable), use this command instead:
+``` bash
+$ composer create-project quidphp/project --prefer-dist --stability=dev
+```
+
 ## Requirement
 **QuidPHP/Project** requires the following:
 - PHP 7.3+ with these extensions:
