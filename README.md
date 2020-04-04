@@ -110,7 +110,7 @@ Once you are logged in, you will be able to change the password for the user and
     - CLI: write **php quid /:dev/assert** or **php quid /:prod/assert** within the Command Line Interface.
 
 ### Known issues
-- The testsuite fails on Windows when using the Command Prompt
+- The testsuite fails on Windows when using the Command Prompt.
 - On some setup, you may need to add your domain to the system hosts file. If not, some assertions involving curl may fail.
 - On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.
 
