@@ -27,7 +27,7 @@ $ composer create-project quidphp/project --prefer-dist --stability=dev
 
 ## Requirement
 **QuidPHP/Project** requires the following:
-- PHP 7.3+ with these extensions:
+- PHP 7.3 or 7.4 with these extensions:
     - curl
     - date
     - fileinfo

@@ -1,6 +1,6 @@
 .DS_Store
 ._*,
-_quid_history.txt
+_quid.txt
 Thumbs.db
 /composer.lock
 /vendor/*
