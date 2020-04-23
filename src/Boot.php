@@ -76,7 +76,7 @@ class Boot extends Lemur\Boot
     // isApp
     final public function isApp():bool
     {
-        return ($this->type() === 'app')? true:false;
+        return $this->type() === 'app';
     }
 }
 
