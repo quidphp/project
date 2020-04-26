@@ -9,7 +9,7 @@ use Quid\Lemur;
 class Boot extends Lemur\Boot
 {
     // config
-    public static $config = [
+    public static array $config = [
         'types'=>['app','cms'],
         'version'=>['app'=>'1.0'],
         'lang'=>['en'],

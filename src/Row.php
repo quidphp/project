@@ -8,7 +8,7 @@ use Quid\Lemur;
 abstract class Row extends Lemur\Row
 {
     // config
-    public static $config = [
+    public static array $config = [
         '@app'=>[
             'where'=>true,
             'search'=>false,

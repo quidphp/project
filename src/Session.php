@@ -8,6 +8,6 @@ use Quid\Lemur;
 class Session extends Lemur\Session
 {
     // config
-    public static $config = [];
+    public static array $config = [];
 }
 ?>

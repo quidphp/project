@@ -8,6 +8,6 @@ use Quid\Core;
 class Error extends Core\Route\Error
 {
     // config
-    public static $config = [];
+    public static array $config = [];
 }
 ?>

@@ -8,7 +8,7 @@ use Quid\Lemur;
 class User extends Lemur\Row\User
 {
     // config
-    public static $config = [
+    public static array $config = [
         'emailModel'=>[
             'resetPassword'=>'resetPassword',
             'userWelcome'=>'userWelcome'],
