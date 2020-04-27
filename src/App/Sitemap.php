@@ -8,6 +8,6 @@ use Quid\Core;
 class Sitemap extends Core\Route\Sitemap
 {
     // config
-    public static array $config = [];
+    protected static array $config = [];
 }
 ?>
