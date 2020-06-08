@@ -32,5 +32,5 @@ declare(strict_types=1);
     }
 
     return;
-})($_SERVER['REQUEST_SCHEME'],$_SERVER['SERVER_NAME'],$_SERVER['REQUEST_URI']);
+})($_SERVER['REQUEST_SCHEME'],$_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST'],$_SERVER['REQUEST_URI']);
 ?>
