@@ -2,7 +2,8 @@
 declare(strict_types=1);
 // file for booting the application and Cms via CLI
 
-(function(?array $argv):void {
+(function() {
+    $argv = $_SERVER['argv'] ?? null;
 
     if(!empty($argv))
     {
@@ -34,6 +35,5 @@ declare(strict_types=1);
     }
 
     return;
-
-})($_SERVER['argv']);
+})();
 ?>

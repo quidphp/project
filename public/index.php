@@ -2,15 +2,11 @@
 declare(strict_types=1);
 // index file for booting the application and Cms via an HTTP request
 
-(function(?string $scheme,?string $host,?string $uri):void {
+(function() {
     http_response_code(500);
-
-    if(!empty($scheme) && !empty($host) && !empty($uri))
-    {
-        $config = require dirname(__DIR__).'/env.php';
-        $schemeHost = $scheme.'://'.$host;
-        $envType = array_search($schemeHost,$config['schemeHost'],true);
-    }
+    $config = require dirname(__DIR__).'/env.php';
+    $schemeHost = $_SERVER['REQUEST_SCHEME'].'://'.($_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST']);
+    $envType = array_search($schemeHost,$config['schemeHost'],true);
 
     if(!empty($envType))
     {
@@ -32,5 +28,5 @@ declare(strict_types=1);
     }
 
     return;
-})($_SERVER['REQUEST_SCHEME'],$_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST'],$_SERVER['REQUEST_URI']);
+})();
 ?>
