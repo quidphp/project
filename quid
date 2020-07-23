@@ -33,7 +33,5 @@ declare(strict_types=1);
         $config['request']['argv'] = $argv;
         (require $boot)($config);
     }
-
-    return;
 })();
 ?>
