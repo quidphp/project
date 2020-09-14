@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 namespace Project\App;
-use Quid\Core;
+use Quid\Site;
 
 // error
 // class for the error route of the app
-class Error extends Core\Route\Error
+class Error extends Site\App\Error
 {
     // config
     protected static array $config = [];

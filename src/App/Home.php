@@ -2,11 +2,11 @@
 declare(strict_types=1);
 namespace Project\App;
 use Quid\Base\Html;
-use Quid\Core;
+use Quid\Site;
 
 // home
 // class for the home route of the app
-class Home extends Core\Route\Home
+class Home extends Site\App\Home
 {
     // config
     protected static array $config = [];
