@@ -6,11 +6,11 @@ return [
     'cliEnvType'=>'dev/cms',
 
     'schemeHost'=>[
-        'dev/app'=>'http://project.test',
+        'dev/app'=>'https://project.test',
         'prod/app'=>'https://project.com',
-        'dev/cms'=>'http://cms.project.test',
+        'dev/cms'=>'https://cms.project.test',
         'prod/cms'=>'https://cms.project.com',
-        'dev/assert'=>'http://assert.project.test',
+        'dev/assert'=>'https://assert.project.test',
         'prod/assert'=>'https://assert.project.com',
     ],
 
