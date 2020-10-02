@@ -6,7 +6,8 @@ declare(strict_types=1);
     http_response_code(500);
     $config = require dirname(__DIR__).'/env.php';
     $scheme = $_SERVER['REQUEST_SCHEME'] ?? ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')? 'https':'http');
-    $schemeHost = $scheme.'://'.($_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST']);
+    $host = $_SERVER['SERVER_NAME'] ?: $_SERVER['HTTP_HOST'];
+    $schemeHost = $scheme.'://'.$host;
     $envType = array_search($schemeHost,$config['schemeHost'],true);
 
     if(!empty($envType))
