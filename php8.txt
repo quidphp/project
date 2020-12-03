@@ -1,0 +1,9 @@
+Note PHP 8
+3 décembre 2020
+- retrait de core/row/_log abstract prepareLogData
+- retrait de core/row/_queue abstract prepareQueueData
+
+- il faut ajouter le ini assert.exception=0, car PHP 8 throw les exceptions par défaut (et ignore le handler)
+- les deprecated arguments ne s'affichent pas avec opcache à ON
+- il y a une différente dans timezone entre 7.4 et 8.0
+- il faut retirer entièrement curl de base/res
