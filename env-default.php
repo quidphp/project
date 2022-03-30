@@ -9,9 +9,7 @@ return [
         'dev/app'=>'https://project.test',
         'prod/app'=>'https://project.com',
         'dev/cms'=>'https://cms.project.test',
-        'prod/cms'=>'https://cms.project.com',
-        'dev/assert'=>'https://assert.project.test',
-        'prod/assert'=>'https://assert.project.com',
+        'prod/cms'=>'https://cms.project.com'
     ],
 
     'path'=>[
@@ -25,15 +23,9 @@ return [
     ],
 
     '@dev'=>[
-        'db'=>['mysql:host=localhost;port=3306;dbname=project','root','']],
+        'db'=>['mysql:host=localhost;port=3306;dbname=project;user=root','']],
 
     '@prod'=>[
-        'db'=>['mysql:host=localhost;port=3306;dbname=project','','']],
-
-    '@assert'=>[
-        'db'=>['mysql:host=localhost;port=3306;dbname=projectTest','root',''],
-        'path'=>[
-            'boot'=>'[vendor]/quidphp/lemur/test/Suite/BootLemur.php'
-        ]]
+        'db'=>['mysql:host=localhost;port=3306;dbname=project;user=root','']]
 ];
 ?>
