@@ -8,3 +8,4 @@ Thumbs.db
 /env.php
 !/public/index.php
 !/public/.htaccess
+!/storage/public
