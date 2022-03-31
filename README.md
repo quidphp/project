@@ -60,7 +60,7 @@ $ composer create-project quidphp/project --prefer-dist
 - [phpmailer/phpmailer](https://github.com/phpmailer/phpmailer) - PHPMailer\PHPMailer - The classic email sending library for PHP
 - [tedivm/jshrink](https://github.com/tedious/JShrink) - JShrink - Javascript Minifier built in PHP
 - [scssphp/scssphp](https://github.com/scssphp/scssphp) - ScssPhp\ScssPhp - SCSS compiler written in PHP
-- [tinymce/tinymce](https://github.com/tinymce/tinymce) - Tinymce - The world's #1 JavaScript library for rich text editing
+- [tinymce/tinymce](https://github.com/tinymce/tinymce) - Tinymce - The world's best JavaScript library for rich text editing
 
 All dependencies will be resolved by using the [Composer](https://getcomposer.org) installation process.
 
