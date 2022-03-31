@@ -107,8 +107,8 @@ Once you are logged in, you will be able to change the password for the user and
 - [README.md](README.md) - This readme file in markdown format
 - [db.sql](db.sql) - Minimal database structure required
 - [storage/public/favicon.ico](storage/public/favicon.ico) - Generic favicon (16x16), this will be symlinked to *public/favicon.ico*.
-- [css/app/_include.scss](scss/app/_include.scss) - Scss stylesheet for declaring variables and mixins
-- [css/app/app.scss](scss/app/app.scss) - Main scss stylesheet for the app
+- [css/app/_include.scss](css/app/_include.scss) - Scss stylesheet for declaring variables and mixins
+- [css/app/app.scss](css/app/app.scss) - Main scss stylesheet for the app
 - [js/app/app.js](js/app/app.js) - Main JavaScript file for the app
 - [public/.htaccess](public/.htaccess) - Simple apache directive file, requires mod_rewrite
 - [public/index.php](public/index.php) - Index file for booting the application and Cms via an HTTP request
