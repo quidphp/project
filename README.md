@@ -6,7 +6,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/quidphp/project)](https://github.com/quidphp/project)
 
 ## About
-**QuidPHP/Project** repository contains a sample application project built on top of the QuidPHP frameword. This application is using LemurCms for content management. It also offers a way to run the full QuidPHP test suite.
+**QuidPHP/Project** repository contains a sample application project built on top of the QuidPHP frameword. This application is using LemurCms for content management.
 
 ## License
 **QuidPHP/Project** is available as an open-source software under the [MIT license](LICENSE).
