@@ -169,15 +169,6 @@ CREATE TABLE `logCron` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-LOCK TABLES `logCron` WRITE;
-/*!40000 ALTER TABLE `logCron` DISABLE KEYS */;
-
-INSERT INTO `logCron` (`id`, `route`, `context`, `json`, `session_id`, `userCommit`, `userAdd`, `dateAdd`, `userModify`, `dateModify`)
-VALUES
-	(1,'Quid\\Lemur\\Cms\\CliClearAll','{\"env\":\"dev\",\"type\":\"cms\",\"lang\":\"en\",\"role\":\"admin\"}','[{\"pos\":\"/Server/quidphp/project/storage/log\"},{\"pos\":\"/Server/quidphp/project/storage/error\"},{\"neg\":\"/Server/quidphp/project/storage/cache\"},{\"pos\":\"/Server/quidphp/project/public/css\"},{\"pos\":\"/Server/quidphp/project/public/js\"},{\"pos\":\"/Server/quidphp/project/public/media\"},{\"pos\":\"/Server/quidphp/project/public/storage\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\Log\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\LogCron\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\LogEmail\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\LogError\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\LogHttp\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\LogSql\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\QueueEmail\"},{\"pos\":\"Quid\\\\Core\\\\Row\\\\CacheRoute\"}]',3,2,2,1600115384,NULL,NULL);
-
-/*!40000 ALTER TABLE `logCron` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table logEmail
