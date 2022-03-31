@@ -87,7 +87,7 @@ The *envType* determines if the application or CMS needs to be booted (and also 
 ``` bash
 $ php quid /en/my-url
 $ php quid /en/my-url:dev/cms
-$ php quid /:dev/assert
+$ php quid /:dev/app
 ```
 
 ## Credentials
