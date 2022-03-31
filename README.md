@@ -44,7 +44,7 @@ $ composer create-project quidphp/project --prefer-dist
     - *memory_limit* must be at least 128MB
 - Mysql (>= 8.0) or MariaDB (>= 10.5) database
 - Apache or Nginx server
-    - Running on MacOs, Windows or Linux
+    - Running on MacOs, Linux or Windows
 - Minimal browser: Internet Explorer 11
     
 ## Dependency
@@ -118,6 +118,10 @@ Once you are logged in, you will be able to change the password for the user and
 - [src/App/Error.php](src/App/Error.php) - Class for the error route of the app
 - [src/App/Home.php](src/App/Home.php) - Class for the home route of the app
 - [src/Row/User.php](src/Row/User.php) - Class for a row of the user table
+
+## Known issues
+- On Windows, there are some problems related to creating symlinks.
+- On Windows, you will need to add *lower_case_table_names* = 2 in your database configuration file (my.cnf). The table and column names need to be stored in their natural case.
 
 ## Testing
 **QuidPHP** testsuite can be run by creating a new [QuidPHP/Assert](https://github.com/quidphp/assert) project.
