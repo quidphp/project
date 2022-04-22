@@ -19,6 +19,7 @@
         "quidphp/routing": "dev-master",
         "quidphp/core": "dev-master",
         "quidphp/front": "dev-master",
+        "quidphp/include": "dev-master",
         "quidphp/lemur": "dev-master",
         "quidphp/site": "dev-master",
         "verot/class.upload.php": "^2.0",
