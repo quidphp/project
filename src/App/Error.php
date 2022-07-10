@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 namespace Project\App;
-use Quid\Base\Html;
 use Quid\Site;
 
 // error
