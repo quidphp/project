@@ -64,24 +64,21 @@ Once the installation is complete, simply follow these steps:
 6. Update the database parameters within the **env.php** file.
 7. Not required, but you are encouraged to change the namespace of all PHP classes within the [src](src) folder. The default namespace is Project.
 
-## Booting
-There are two ways to boot the application or CMS.
-
-### HTTP
+## Booting via HTTP
 From your web browser, enter the URL to the [public/index.php](public/index.php) entry file. The host used will determine if the application or CMS is booted.
 
-### CLI
-Open the project folder in the Command Line. Then submit a command that should be in the following format: **php quid [path][:envType]**.
-
-The *envType* determines if the application or CMS needs to be booted (and also in which environment). If the *envType* is not specified, the system will fallback to the *cliEnvType* value within the **env.php** file. Exemple:
+## QuidPHP CLI routes
+Open the project folder in the Command Line. You may now submit a command in the following format: 
 ``` bash
-$ php quid /en/my-url
-$ php quid /en/my-url:dev/cms
-$ php quid /:prod/app
+php quid [path][:envType]
+exemple:
+php quid /en/my-url
+php quid /en/my-url:dev/cms
+php quid /:prod/app
 ```
 
-## Credentials
-Once you open the CMS within your browser, you will need to login. The default user:
+## LemurCMS credentials
+Once you open the CMS within your browser, you will need to login. The default user is:
 - Username: **admin** 
 - Password: **changeme123**
 
