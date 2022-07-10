@@ -106,7 +106,7 @@ Once you are logged in, you will be able to change the password for the user and
 - [src/Route.php](src/Route.php) - Abstract class for a route, all routes will extend this class
 - [src/Row.php](src/Row.php) - Abstract class for a row, all rows will extend this class
 - [src/Session.php](src/Session.php) - Class used to represent the active session
-- [src/App/_template_.php](src/App/_template_.php) - Trait used by all routes which generate an interface
+- [src/App/_template.php](src/App/_template_.php) - Trait used by all routes which generate an interface
 - [src/App/Error.php](src/App/Error.php) - Class for the error route of the app
 - [src/App/Home.php](src/App/Home.php) - Class for the home route of the app
 - [src/Row/User.php](src/Row/User.php) - Class for a row of the user table
